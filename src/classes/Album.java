@@ -1,5 +1,5 @@
 
-package estruturadeaudio;
+package classes;
 
 
 public class Album {
