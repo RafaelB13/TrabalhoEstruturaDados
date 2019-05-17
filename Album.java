@@ -6,7 +6,7 @@ public class Album {
     
     public Musica[] songs;// corrigir o vetor para receber musicas 
     //o album recebe 10 musicas
-    public Artista compositor;
+    public Artista compositor;//teste de sinc
     private int i=0;
     
     public void incluirsong(Musica music){
