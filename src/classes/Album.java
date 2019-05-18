@@ -14,6 +14,7 @@ public class Album {
         i++;
     }
 
+    //Teste ####
     public Album(Musica[] songs, Artista compositor) {
         this.songs = songs;
         this.compositor = compositor;
