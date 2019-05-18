@@ -10,7 +10,7 @@ public class EstruturaDeAudio {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        
+        //Testes
         Musica m1 = new Musica("Can't Stop", "C:/Users");
         Musica[] songs = new Musica[10];
         songs[0] = m1;
