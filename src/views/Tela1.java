@@ -1,9 +1,9 @@
 package views;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -16,18 +16,12 @@ public class Tela1 extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
           
-        AnchorPane pane = new AnchorPane();
-        pane.setPrefSize(300, 300);
-        
-        Button btn = new Button("Teste");
-        pane.getChildren().add(btn);
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLSpotify.fxml"));
         
         
-        primaryStage.setScene(new Scene(pane));
+        
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        
-        btn.setLayoutX((pane.getWidth() - btn.getWidth()) / 2);
-        btn.setLayoutY(120);
         
         
         

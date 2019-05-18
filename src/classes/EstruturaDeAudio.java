@@ -10,7 +10,15 @@ public class EstruturaDeAudio {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println("Teste Rafael");
+        
+        Musica m1 = new Musica("Can't Stop", "C:/Users");
+        Musica[] songs = new Musica[10];
+        songs[0] = m1;
+        
+        Artista a1 = new Artista("Red Hot Chili Peppers", "Rock");
+        
+        
+        Album album = new Album(songs, a1);
     }
     
 }
