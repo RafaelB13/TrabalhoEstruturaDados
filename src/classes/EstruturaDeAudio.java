@@ -42,6 +42,8 @@ public class EstruturaDeAudio {
         r.inserirNo(15);
         r.inserirNo(3);
         
+        System.out.println(redhot);
+        
         System.out.println("    "+r.raiz);
         System.out.println(r.raiz.esquerdo +"       "+r.raiz.direito);
         
