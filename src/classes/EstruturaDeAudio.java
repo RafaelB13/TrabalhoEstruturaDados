@@ -41,9 +41,31 @@ public class EstruturaDeAudio {
         
         Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", album);
         
+        Arvore<Artista> arvore = new Arvore<>();
+        arvore.inserirNo(redhot);
         
-        System.out.println(redhot);
+        //Segundo artista
+        Musica n1 = new Musica("Starlight", "C:/Users/Muse");
+        Musica n2 = new Musica("Supermassive Black Hole", "C:/Users/Muse");
         
+        Pilha<Musica> songs3 = new Pilha<>(11);
+        songs3.inserir(n1);
+        songs3.inserir(n2);
+        
+        
+        Album bhr = new Album(songs3, "Black Holes and Revelations");
+        
+        ListaDuplamente<Album> bh = new ListaDuplamente<>();
+        bh.inserir(bhr);
+        
+        Artista muse = new Artista("Muse", "Rock", bh);
+        
+        arvore.inserirNo(muse);
+        
+        System.out.println("\n#################################\n");
+        System.out.println(arvore.raiz);        
+        System.out.println("\n#################################\n");
+        System.out.println(arvore.raiz.direito);
       
         
         

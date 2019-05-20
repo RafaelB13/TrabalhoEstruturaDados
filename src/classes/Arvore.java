@@ -1,16 +1,16 @@
-package estruturas.arvore;
+package classes;
 
 
 
-public class Arvore<T extends Comparable<T>> {
+public class Arvore<Artista extends Comparable<Artista>> {
 	No raiz;
 	
 	public Arvore() {
 		this.raiz = null;
 	}
 	
-	public No inserirNo(T valor) {
-		No<T> n = new No<T>(valor);
+	public No inserirNo(Artista valor) {
+		No n = new No(valor);
 		return inserirNo(n, null);
 		
 	}
@@ -44,13 +44,13 @@ public class Arvore<T extends Comparable<T>> {
 	}
 	
 
-	public No removerNo(T valor) {
+	public No removerNo(Artista valor) {
 		return removerNo(valor, null);
 	}
 	
-	public No removerNo(T valor, No currentno) {
+	public No removerNo(Artista valor, No currentno) {
 		
-		No<T> noret = null;
+		No noret = null;
 		
 		if(currentno == null) 
 			currentno = raiz;

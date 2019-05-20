@@ -1,5 +1,7 @@
 package estruturas.arvore;
 
+import classes.Arvore;
+
 /**
  *
  * @author Rafael Borges

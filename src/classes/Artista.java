@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Je
  */
-public class Artista {
+public class Artista implements Comparable<Artista>{
     
     private String cantor;
     private String genero;
@@ -44,6 +44,11 @@ public class Artista {
     @Override
     public String toString() {
         return "Artista: " + cantor + ", Genero: " + genero + "\n" + albuns;
+    }
+
+    @Override
+    public int compareTo(Artista t) {
+        return 0;
     }
     
     

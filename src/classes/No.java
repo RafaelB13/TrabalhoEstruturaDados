@@ -1,30 +1,30 @@
-package estruturas.arvore;
+package classes;
 
 
 
 
-public class No<T extends Comparable<T>> {
+public class No<Artista extends Comparable<Artista>> {
 	
 	No esquerdo;
 	No direito;
-	T valor;
+	Artista valor;
 	No pai;
 	
-	public No(T valor) {
+	public No(Artista valor) {
 		this.valor = valor;
 	}
 	
-	public No(T valor, No pai) {
+	public No(Artista valor, No pai) {
 		this.valor = valor;
 		this.pai = pai;
 	}
 	
 	
-	public void inserirValor(T valor) {
+	public void inserirValor(Artista valor) {
 		this.valor = valor;
 	}
 	
-	public T obterValor() {
+	public Artista obterValor() {
 		return this.valor;
 	}
 	
