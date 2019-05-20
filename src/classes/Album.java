@@ -3,11 +3,10 @@ package classes;
 
 import estruturas.Fila;
 import estruturas.Pilha;
-import estruturas.listaduplamente.ListaDuplamente;
 import java.util.ArrayList;
 
 
-public class Album {
+public class Album implements Comparable<Album>{
     
     /**
      *
@@ -32,7 +31,12 @@ public class Album {
 
     @Override
     public String toString() {
-        return "\nSongs: " + songs;
+        return "\nÁlbum: "+titulo+"\nSongs: " + songs;
+    }
+
+    @Override
+    public int compareTo(Album t) {
+        return 0;
     }
     
     

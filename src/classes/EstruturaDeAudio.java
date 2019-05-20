@@ -1,6 +1,7 @@
 
 package classes;
 
+import estruturas.listaduplamente.ListaDuplamente;
 import estruturas.Fila;
 import estruturas.Pilha;
 import java.util.ArrayList;
@@ -20,32 +21,30 @@ public class EstruturaDeAudio {
         Musica m3 = new Musica("Universally Speaking", "C:/Users/Red Hot");
         
         
+        Pilha<Musica> songs1 = new Pilha<Musica>(11);
+        songs1.inserir(m1);
+        songs1.inserir(m2);
+        songs1.inserir(m3);
+        
+        Pilha<Musica> songs2 = new Pilha<Musica>(11);
+        songs2.inserir(m1);
+        songs2.inserir(m2);
+        songs2.inserir(m3);
+        
+        Album a1 = new Album(songs1, "Greates Hits");
+        Album a2 = new Album(songs2, "Californication");
         
         
-        Pilha<Musica> song = new Pilha<Musica>(11);
-        song.inserir(m1);
-        song.inserir(m2);
-        song.inserir(m3);
-        song.inserir(m1);
-        song.inserir(m2);
-        song.inserir(m3);
+        ListaDuplamente<Album> album = new ListaDuplamente<>();
+        album.inserir(a1);
+        album.inserir(a2);
         
-        Album a1 = new Album(song, "Greates Hits");
+        Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", album);
         
-        ArrayList<Album> album = new ArrayList<>();
-        album.add(a1);
-        
-        Artista redhot = new Artista("Red Hot", "Rock", album);
-        
-        Arvore r = new Arvore();
-        r.inserirNo(10);
-        r.inserirNo(15);
-        r.inserirNo(3);
         
         System.out.println(redhot);
         
-        System.out.println("    "+r.raiz);
-        System.out.println(r.raiz.esquerdo +"       "+r.raiz.direito);
+      
         
         
     }

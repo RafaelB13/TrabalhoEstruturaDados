@@ -1,14 +1,14 @@
 package estruturas.listaduplamente;
 
 
-public class ListaDuplamente< T extends Comparable<T>> {
+public class ListaDuplamente<Album extends Comparable<Album>> {
 
-    No<T> primeiro;
-    No<T> no_atual = primeiro;
+    NoL primeiro;
+    NoL no_atual = primeiro;
 
-    public void inserir(T valor) {
-        No<T> novo_no = new No<T>(valor);
-        No<T> auxiliar = primeiro;
+    public void inserir(Album valor) {
+        NoL novo_no = new NoL(valor);
+        NoL auxiliar = primeiro;
 
         if (this.primeiro == null) {
             this.primeiro = novo_no;
@@ -51,11 +51,11 @@ public class ListaDuplamente< T extends Comparable<T>> {
 
     }
 
-    public No<T> remover(T valor) {//arrumada 
+    public NoL remover(Album valor) {//arrumada 
 
-        No<T> auxiliar = primeiro;
+        NoL auxiliar = primeiro;
 
-        No<T> retorno = null;
+        NoL retorno = null;
 
         while ((auxiliar != null) && (auxiliar.obterValor().compareTo(valor) != 0)) {
             auxiliar = auxiliar.obterProximo();
@@ -79,7 +79,7 @@ public class ListaDuplamente< T extends Comparable<T>> {
 
     }
 
-    public No<T> buscar(T valor) {
+    public NoL<Album> buscar(Album valor) {
 
         if (no_atual == null) {
             no_atual = primeiro;
@@ -97,7 +97,7 @@ public class ListaDuplamente< T extends Comparable<T>> {
         return no_atual;
     }
 
-    public String buscarCount(T valor) {
+    public String buscarCount(Album valor) {
 
         int count = 0;
 
@@ -119,11 +119,11 @@ public class ListaDuplamente< T extends Comparable<T>> {
 
     public String toString() {
         String s = "";
-        No<T> auxiliar = primeiro;
+        NoL auxiliar = primeiro;
 
         while (auxiliar != null) {
 
-            s += auxiliar.obterValor().toString() + " - ";
+            s += auxiliar.obterValor().toString();
 
             auxiliar = auxiliar.obterProximo();
         }

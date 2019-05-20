@@ -5,6 +5,7 @@
  */
 package classes;
 
+import estruturas.listaduplamente.ListaDuplamente;
 import java.util.ArrayList;
 
 /**
@@ -15,10 +16,10 @@ public class Artista {
     
     private String cantor;
     private String genero;
-    private ArrayList<Album> albuns;
+    private ListaDuplamente<Album> albuns;
     //incluir lista de albuns
 
-    public Artista(String cantor, String genero, ArrayList<Album> albuns) {
+    public Artista(String cantor, String genero, ListaDuplamente<Album> albuns) {
         this.cantor = cantor;
         this.genero = genero;
         this.albuns = albuns;

@@ -1,39 +1,39 @@
 package estruturas.listaduplamente;
 
-public class No<T extends Comparable<T>> {
+public class NoL<Album extends Comparable<Album>> {
 	
-	private T valor;
-	private No proximo;
-        private No anterior;
+	private Album valor;
+	private NoL proximo;
+        private NoL anterior;
 	
-	public No(T valor) {
+	public NoL(Album valor) {
 		this.valor = valor;
 		proximo = null;
                 
 	}
 	
 	/**obt�m o pr�ximo n� */
-	public No<T> obterProximo() {
+	public NoL obterProximo() {
 		return this.proximo;
 	}
         
-        public No<T> obterAnterior() {
+        public NoL obterAnterior() {
 		return this.anterior;
 	}
 	/**inserir o pr�ximo n� */
-	public void inserirProximo(No proximo) {
+	public void inserirProximo(NoL proximo) {
 		this.proximo = proximo;
 	}
         
-        public void inserirAnterior(No anterior) {
+        public void inserirAnterior(NoL anterior) {
 		this.anterior = anterior;
 	}
 	/**inserir o valor no n� */
-	public void inserirValor(T valor) {
+	public void inserirValor(Album valor) {
 		this.valor= valor;
 	}
 	/**obter o valor do n� */
-	public T obterValor() {
+	public Album obterValor() {
 		return this.valor;
 	}
 	
