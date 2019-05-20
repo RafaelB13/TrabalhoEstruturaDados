@@ -77,6 +77,18 @@ public class Pilha<T> {
 	    return topo == arrayPilha.length-1;
 
 	}
+        
+        @Override
+    public String toString() {
+
+        String s ="";
+        for (int i = 0; i <= topo; i++) {
+            s+= arrayPilha[i];
+            if (i < topo)
+                s+= ", ";
+        }
+        return s;
+    }
 
 	
 	

@@ -1,4 +1,4 @@
-package estruturas.arvore;
+package classes;
 
 
 
@@ -50,7 +50,7 @@ public class Arvore<T extends Comparable<T>> {
 	
 	public No removerNo(T valor, No currentno) {
 		
-		No noret = null;
+		No<T> noret = null;
 		
 		if(currentno == null) 
 			currentno = raiz;

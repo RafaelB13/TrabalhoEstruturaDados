@@ -1,6 +1,6 @@
 package estruturas;
 
-import estruturas.arvore.Arvore;
+import classes.Arvore;
 
 /**
  *

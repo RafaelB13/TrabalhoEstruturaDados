@@ -39,7 +39,6 @@ public class Fila<T>{
 		
 		if(!estaCheia()){
 			arrayFila [fim++] = e;
-			System.out.println("inserindo - " + fim);
 			return true;
 		}
 		
@@ -49,22 +48,21 @@ public class Fila<T>{
 	@Override
     public String toString(){
 		
-        String s = "[";
+        String s = "";
         int i = inicio; 
         while(i != fim){
-        	System.out.println(s);
             if(i == arrayFila.length)
                 i = 0;
             
             if(i == fim-1) 
                 s+=arrayFila[i];
             else 
-                s+=arrayFila[i] + " , ";
+                s+=arrayFila[i] + "";
         
             i++;
     		
         }
         
-        return s + "]";  
+        return s;  
     }
 }
