@@ -48,7 +48,13 @@ public class Artista implements Comparable<Artista>{
 
     @Override
     public int compareTo(Artista t) {
-        return 0;
+        if(t.cantor.compareTo(this.cantor) > 0)
+            return -1;
+        else if(t.cantor.compareTo(this.cantor) == 0)
+            return 0;
+        else
+            return 1;
+        
     }
     
     
