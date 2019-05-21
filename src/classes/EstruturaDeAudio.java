@@ -34,7 +34,7 @@ public class EstruturaDeAudio {
         ListaDuplamente<Album> album = new ListaDuplamente<>();
         album.inserir(a1);
         album.inserir(a2);
-        Artista redhot = new Artista("R", "Rock", album);
+        Artista redhot = new Artista("Red Hot", "Rock", album);
         
         //Segundo artista ********************************
         Musica n1 = new Musica("Starlight", "C:/Users/Muse");
@@ -45,7 +45,7 @@ public class EstruturaDeAudio {
         Album bhr = new Album(songs3, "Black Holes and Revelations");
         ListaDuplamente<Album> bh = new ListaDuplamente<>();
         bh.inserir(bhr);
-        Artista muse = new Artista("M", "Rock", bh);
+        Artista muse = new Artista("Muse", "Rock", bh);
         
         
         //Terceiro artista *******************************
@@ -57,7 +57,7 @@ public class EstruturaDeAudio {
         Album gr = new Album(song4, "appetite for destruction");
         ListaDuplamente<Album> gunR = new ListaDuplamente<>();
         gunR.inserir(gr);
-        Artista guns = new Artista("T", "Rock", gunR);
+        Artista guns = new Artista("Tribalhistas", "Rock", gunR);
         
         //Quarto Artista **********************************
         Musica c1 = new Musica("Teste1", "C/Users/Teste");
@@ -68,7 +68,7 @@ public class EstruturaDeAudio {
         Album ts = new Album(songs5, "Teste Album");
         ListaDuplamente<Album> tst = new ListaDuplamente<>();
         tst.inserir(ts);
-        Artista teste = new Artista("D", "Pop", tst);
+        Artista teste = new Artista("Disney", "Pop", tst);
         
         //Quinto Artista *******************************
         Musica d1 = new Musica("Musica1", "C/Users/Musica");
@@ -79,7 +79,7 @@ public class EstruturaDeAudio {
         Album m = new Album(songs6, "Musicas Album");
         ListaDuplamente<Album> mm = new ListaDuplamente<>();
         mm.inserir(m);
-        Artista mmm = new Artista("S", "Pop", mm);
+        Artista mmm = new Artista("Spice girls", "Pop", mm);
         
         //Sexto Artista ********************************
         Musica f1 = new Musica("Musica1", "C/Users");
@@ -90,7 +90,7 @@ public class EstruturaDeAudio {
         Album f = new Album(songs7, "Album");
         ListaDuplamente<Album> ff = new ListaDuplamente<>();
         ff.inserir(f);
-        Artista fff = new Artista("U", "Rock", ff);
+        Artista fff = new Artista("U2", "Rock", ff);
         
         //Sétimo Artista ******************************
         Musica g1 = new Musica("Musica1", "C/Users");
@@ -101,7 +101,7 @@ public class EstruturaDeAudio {
         Album g = new Album(songs8, "Album");
         ListaDuplamente<Album> gg = new ListaDuplamente<>();
         gg.inserir(g);
-        Artista ggg = new Artista("V", "Rock", gg);
+        Artista ggg = new Artista("Veronicas", "Rock", gg);
         
         //Oitavo Artista ****************************
         Musica h1 = new Musica("Musica1", "C/Users");
@@ -114,6 +114,60 @@ public class EstruturaDeAudio {
         hh.inserir(h);
         Artista hhh = new Artista("O", "Rock", hh);
         
+        // Nono Artista
+        Musica avril1 = new Musica("Musica1", "C/Users");
+        Musica avril2 = new Musica("Musica1", "C/Users");
+        Pilha<Musica> songs10 = new Pilha<>(11);
+        songs10.inserir(avril1);
+        songs10.inserir(avril2);
+        Album candy = new Album(songs10, "Album");
+        ListaDuplamente<Album> aa = new ListaDuplamente<>();
+        aa.inserir(candy);
+        Artista aaa = new Artista("Avril", "Rock", aa);
+        
+        //Décimo artista  - inserindo artista Beatles com 5 albuns e 10 musicas em cada
+        Musica Beatles1 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles2 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles3 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles4 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles5 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles6 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles7 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles8 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles9 = new Musica("Musica1", "C/Users/Beatles");
+        Musica Beatles10 = new Musica("Musica1", "C/Users/Beatles");
+        
+        //5 pilhas para cada album
+        Pilha<Musica> songs11 = new Pilha<>(11);
+        Pilha<Musica> songs12 = new Pilha<>(11);
+        Pilha<Musica> songs13 = new Pilha<>(11);
+        Pilha<Musica> songs14 = new Pilha<>(11);
+        Pilha<Musica> songs15 = new Pilha<>(11);
+        
+        songs11.inserir(Beatles1);
+        songs11.inserir(Beatles2);
+        songs11.inserir(Beatles3);
+        songs11.inserir(Beatles4);
+        songs11.inserir(Beatles5);
+        songs11.inserir(Beatles6);
+        songs11.inserir(Beatles7);
+        songs11.inserir(Beatles8);
+        songs11.inserir(Beatles9);
+        songs11.inserir(Beatles10);
+        //5 albuns.. cada um com sua pilha
+        Album beat1 = new Album(songs11, "Album");
+        Album beat2 = new Album(songs12, "Album");
+        Album beat3 = new Album(songs13, "Album");
+        Album beat4 = new Album(songs14, "Album");
+        Album beat5 = new Album(songs15, "Album");
+        ListaDuplamente<Album> bb = new ListaDuplamente<>();
+        bb.inserir(beat1);
+         bb.inserir(beat2);
+          bb.inserir(beat3);
+           bb.inserir(beat4);
+            bb.inserir(beat5);
+        Artista bbb = new Artista("Beatles", "Rock", aa);
+        
         arvore.inserirNo(redhot);
         arvore.inserirNo(muse);
         arvore.inserirNo(guns);
@@ -122,6 +176,9 @@ public class EstruturaDeAudio {
         arvore.inserirNo(fff);
         arvore.inserirNo(ggg);
         arvore.inserirNo(hhh);
+        arvore.inserirNo(aaa);
+        arvore.inserirNo(bbb);
+        
         
         /** Desenho da árvore
          *         R
@@ -148,7 +205,10 @@ public class EstruturaDeAudio {
         System.out.println(arvore.raiz.esquerdo.direito);
         System.out.println("\n#################################\nraiz.esquerdo.esquerdo\n");
         System.out.println(arvore.raiz.esquerdo.esquerdo);
-        
+        System.out.println("\n#################################\nraiz.esquerdo.esquerdo.esquerdo\n");
+        System.out.println(arvore.raiz.esquerdo.esquerdo.esquerdo);
+        System.out.println("\n#################################\nraiz.esquerdo.esquerdo.esquerdo.diretio\n");
+        System.out.println(arvore.raiz.esquerdo.esquerdo.esquerdo.direito);
       
         
         
