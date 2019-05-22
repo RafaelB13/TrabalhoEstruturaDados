@@ -16,8 +16,10 @@ public class Artista implements Comparable<Artista>{
     
     private String cantor;
     private String genero;
-    private ListaDuplamente<Album> albuns;
+    public ListaDuplamente<Album> albuns;
     //incluir lista de albuns
+    
+    
 
     public Artista(String cantor, String genero, ListaDuplamente<Album> albuns) {
         this.cantor = cantor;
@@ -45,6 +47,16 @@ public class Artista implements Comparable<Artista>{
     public String toString() {
         return "Artista: " + cantor + ", Genero: " + genero + "\n" + albuns;
     }
+
+    public ListaDuplamente<Album> getAlbuns() {
+        return albuns;
+    }
+
+    public void setAlbuns(ListaDuplamente<Album> albuns) {
+        this.albuns = albuns;
+    }
+    
+    
 
     @Override
     public int compareTo(Artista t) {

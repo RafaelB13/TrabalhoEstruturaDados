@@ -169,17 +169,18 @@ public class EstruturaDeAudio {
         Artista bbb = new Artista("Beatles", "Rock", aa);
         
         arvore.inserirNo(redhot);
-        arvore.inserirNo(muse);
-        arvore.inserirNo(guns);
-        arvore.inserirNo(teste);
-        arvore.inserirNo(mmm);
-        arvore.inserirNo(fff);
-        arvore.inserirNo(ggg);
-        arvore.inserirNo(hhh);
-        arvore.inserirNo(aaa);
-        arvore.inserirNo(bbb);
+         arvore.inserirNo(muse);
+          arvore.inserirNo(guns);
+           arvore.inserirNo(teste);
+            arvore.inserirNo(mmm);
+             arvore.inserirNo(fff);
+              arvore.inserirNo(ggg);
+               arvore.inserirNo(hhh);
+                arvore.inserirNo(aaa);
+                 arvore.inserirNo(bbb);
         
-        
+        //FIZ ALGUMAS ALTERAÇÕES NAS CLASSES ALBUM E ARTISTA E NO TOSTRING DE ALBUM PRA TESTE NA INTERFACE
+        //EXECUTA O PROJETO TODO PRA VC DA UMA OLHADA COMO FICOU
         /** Desenho da árvore
          *         R
          *   M         T

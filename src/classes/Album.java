@@ -12,7 +12,7 @@ public class Album implements Comparable<Album>{
      *
      */
     //Tipo pilha para armazenar as musicas
-    private Pilha<Musica> songs;// corrigir o vetor para receber musicas 
+    public Pilha<Musica> songs;// corrigir o vetor para receber musicas 
     //o album recebe 10 musicas
     private String titulo;
     
@@ -31,7 +31,7 @@ public class Album implements Comparable<Album>{
 
     @Override
     public String toString() {
-        return "\nÁlbum: "+titulo+"\nSongs: " + songs;
+        return "\nÁlbum: "+titulo;//+"\nSongs: " + songs
     }
 
     @Override
