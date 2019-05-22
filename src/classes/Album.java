@@ -18,15 +18,20 @@ public class Album implements Comparable<Album>{
     
     
     
-    public void incluirsong(Pilha<Musica> music){
-        this.songs = music;
-        
-    }
+
 
     //Teste ####
     public Album(Pilha<Musica> songs, String titulo) {
         this.songs = songs;
         this.titulo = titulo;
+    }
+
+    public Album() {
+    }
+
+    public void incluirsong(Pilha<Musica> music){
+        this.songs = music;
+
     }
 
     @Override

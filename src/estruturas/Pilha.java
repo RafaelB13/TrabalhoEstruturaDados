@@ -8,12 +8,12 @@ import java.util.ArrayList;
  * Implementa��o de uma pilha baseada em vetor gen�rico
  * @param <T> Tipo do array
  */
-public class Pilha<T> {
+public class Pilha<Musica> {
 
 	/**
 	 * Array da Pilha 
 	 */
-	private T[] arrayPilha;
+	private Musica[] arrayPilha;
 	/**
 	 * Atributo para armazenar o indice do topo da pilha
 	 */
@@ -25,7 +25,7 @@ public class Pilha<T> {
      */
 	public Pilha(int max){
 		//instanciando um vetor gen�rico (cria um vetor do tipo Objetc e faz o cast (convers�o) para o tipo T
-		arrayPilha = (T[]) new Object[max];
+		arrayPilha = (Musica[]) new Object[max];
 		topo = -1;
 	}
 	
@@ -34,7 +34,7 @@ public class Pilha<T> {
 	 * @param elemento Elemento a ser inserido na pilha
 	 * @return retora true se a opera��o foi bem sucedida
 	 */
-	public boolean inserir(T elemento) {		
+	public boolean inserir(Musica elemento) {
 
 		if(!this.estaCheia()) {
 			topo++;
@@ -49,7 +49,7 @@ public class Pilha<T> {
 	 * Remove um elemento da pilha, se ela n�o esiver vazia
 	 * @return retorna o elemento se a opera��o foi bem sucedida
 	 */
-	public T remover() {		
+	public Musica remover() {
 		
 		
 		if(!this.estaVazia()) {			

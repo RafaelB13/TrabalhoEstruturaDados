@@ -52,7 +52,7 @@
       </Pane>
       <Pane layoutX="115.0" layoutY="85.0" prefHeight="422.0" prefWidth="629.0" style="-fx-background-color: #f1f8e9;">
          <children>
-            <TextField fx:id="pesquisar" alignment="CENTER" focusTraversable="false" layoutX="71.0" layoutY="14.0" prefHeight="30.0" prefWidth="412.0" promptText="Pesquisar Artistas">
+            <TextField fx:id="pesquisar" alignment="CENTER" focusTraversable="false" layoutX="71.0" layoutY="14.0" prefHeight="30.0" prefWidth="412.0" promptText="Pesquisar Artistas   ex: Red Hot">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -72,16 +72,16 @@
                   <Font name="Berlin Sans FB" size="19.0" />
                </font>
             </Label>
-            <ListView fx:id="listView" focusTraversable="false" layoutX="10.0" layoutY="112.0" prefHeight="48.0" prefWidth="616.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14px;">
+            <ListView fx:id="listView" focusTraversable="false" layoutX="10.0" layoutY="112.0" prefHeight="100.0" prefWidth="616.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14px;">
                <effect>
                   <ColorAdjust />
                </effect></ListView>
-            <TableView fx:id="tabela" layoutX="10.0" layoutY="170.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="83.0" prefWidth="616.0">
+            <TableView fx:id="tabela" layoutX="10.0" layoutY="222.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="83.0" prefWidth="616.0">
               <columns>
                 <TableColumn fx:id="nomeArtista" prefWidth="615.0" text="Album" />
               </columns>
             </TableView>
-            <TableView layoutX="8.0" layoutY="259.0" prefHeight="153.0" prefWidth="616.0">
+            <TableView layoutX="8.0" layoutY="312.0" prefHeight="100.0" prefWidth="616.0">
               <columns>
                 <TableColumn prefWidth="615.0" text="Musicas" />
               </columns>

@@ -27,6 +27,9 @@ public class Artista implements Comparable<Artista>{
         this.albuns = albuns;
     }
 
+    public Artista() {
+    }
+
     public String getCantor() {
         return cantor;
     }
@@ -45,7 +48,7 @@ public class Artista implements Comparable<Artista>{
 
     @Override
     public String toString() {
-        return "Artista: " + cantor + ", Genero: " + genero + "\n" + albuns;
+        return "Artista: " + cantor + ", Genero: " + genero;//+ "\n" + albuns
     }
 
     public ListaDuplamente<Album> getAlbuns() {

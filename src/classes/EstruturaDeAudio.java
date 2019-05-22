@@ -14,7 +14,7 @@ public class EstruturaDeAudio {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         Arvore<Artista> arvore = new Arvore<>();
         
         //Primeiro Artista ******************************
@@ -186,8 +186,8 @@ public class EstruturaDeAudio {
          *   M         T
          * D   O     S   U 
          *                 V
-         */
-        
+
+        */
         
         
         System.out.println("\n#################################\nraiz\n");
@@ -211,8 +211,8 @@ public class EstruturaDeAudio {
         System.out.println("\n#################################\nraiz.esquerdo.esquerdo.esquerdo.diretio\n");
         System.out.println(arvore.raiz.esquerdo.esquerdo.esquerdo.direito);
       
-        
-        
+
+
     }
     
 }

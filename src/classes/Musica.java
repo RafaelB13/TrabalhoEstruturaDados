@@ -9,10 +9,16 @@ public class Musica {
     public Musica(String nome, String local) {
         this.nome = nome;
         this.local = local;
+
     }
-    
-    
-// eu não entendo necassári colocar sets se temos o construtor
+
+
+
+
+
+
+
+    // eu não entendo necassári colocar sets se temos o construtor
     public String getNome() {
         return nome;
     }
