@@ -70,16 +70,34 @@ public class EstruturaDeAudio {
         tst.inserir(ts);
         Artista teste = new Artista("Disney", "Pop", tst);
         
-        //Quinto Artista *******************************
-        Musica d1 = new Musica("Musica1", "C/Users/Musica");
-        Musica d2 = new Musica("Musica2", "C/Users/Musica");
+        //Quinto Artista - Oasis OK *******************************
+        Musica oasis1 = new Musica("Cigarettes & Alchohol", "C/Users/Oasis");
+        Musica oasis2 = new Musica("D'you Know What I Mean", "C/Users/Oasis");
+        Musica oasis3 = new Musica("Live Forever", "C/Users/Oasis");
+        Musica oasis4 = new Musica("Oasis-Don't look back in anger", "C/Users/Oasis");
+        Musica oasis5 = new Musica("Roll With It", "C/Users/Oasis");
+        Musica oasis6 = new Musica("Shakerman", "C/Users/Oasis");
+        Musica oasis7 = new Musica("Some Might Say", "C/Users/Oasis");
+        Musica oasis8 = new Musica("Stand By Me", "C/Users/Oasis");
+        Musica oasis9 = new Musica("Whatever", "C/Users/Oasis");
+        Musica oasis10 = new Musica("Wonderwall", "C/Users/Oasis");
+        
         Pilha<Musica> songs6 = new Pilha<>(11);
-        songs6.inserir(d1);
-        songs6.inserir(d2);
-        Album m = new Album(songs6, "Musicas Album");
-        ListaDuplamente<Album> mm = new ListaDuplamente<>();
-        mm.inserir(m);
-        Artista mmm = new Artista("Spice girls", "Pop", mm);
+        songs6.inserir(oasis1);
+        songs6.inserir(oasis2);
+        songs6.inserir(oasis3);
+        songs6.inserir(oasis4);
+        songs6.inserir(oasis5);
+        songs6.inserir(oasis6);
+        songs6.inserir(oasis7);
+        songs6.inserir(oasis8);
+        songs6.inserir(oasis9);
+        songs6.inserir(oasis10);
+        
+        Album theBestHit = new Album(songs6, "The Best Hit Singles");
+        ListaDuplamente<Album> OasisLista = new ListaDuplamente<>();
+        OasisLista.inserir(theBestHit);
+        Artista Oasis = new Artista("Oasis", "Rock", OasisLista);
         
         
         //Sexto Artista - The Veronicas OK ********************************
