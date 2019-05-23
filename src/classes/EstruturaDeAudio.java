@@ -81,38 +81,95 @@ public class EstruturaDeAudio {
         mm.inserir(m);
         Artista mmm = new Artista("Spice girls", "Pop", mm);
         
-        //Sexto Artista ********************************
-        Musica f1 = new Musica("Musica1", "C/Users");
-        Musica f2 = new Musica("Musica1", "C/Users");
+        
+        //Sexto Artista - The Veronicas OK ********************************
+        Musica veronicas1 = new Musica("Untouched", "C/Users/TheVeronicas");
+        Musica veronicas2 = new Musica("Hook Me Up", "C/Users/TheVeronicas");
+        Musica veronicas3 = new Musica("This Is How It Feels", "C/Users/TheVeronicas");
+        Musica veronicas4 = new Musica("Take Me on the Floor", "C/Users/TheVeronicas");
+        Musica veronicas5 = new Musica("I Don't Wanna Wait", "C/Users/TheVeronicas");
+        Musica veronicas6= new Musica("Popular", "C/Users/TheVeronicas");
+        Musica veronicas7 = new Musica("Revenge Is Sweeter (Than You Ever Were)", "C/Users/TheVeronicas");
+        Musica veronicas8= new Musica("Someone Wake Me Up", "C/Users/TheVeronicas");
+        Musica veronicas9 = new Musica("All I Have", "C/Users/TheVeronicas");
+        Musica veronicas10= new Musica("In Another Life", "C/Users/TheVeronicas");
+        
         Pilha<Musica> songs7 = new Pilha<>(11);
-        songs7.inserir(f1);
-        songs7.inserir(f2);
-        Album f = new Album(songs7, "Album");
-        ListaDuplamente<Album> ff = new ListaDuplamente<>();
-        ff.inserir(f);
-        Artista fff = new Artista("U2", "Rock", ff);
+        songs7.inserir(veronicas1);
+        songs7.inserir(veronicas2);
+        songs7.inserir(veronicas3);
+        songs7.inserir(veronicas4);
+        songs7.inserir(veronicas5);
+        songs7.inserir(veronicas6);
+        songs7.inserir(veronicas7);
+        songs7.inserir(veronicas8);
+        songs7.inserir(veronicas9);
+        songs7.inserir(veronicas10);
         
-        //Sétimo Artista ******************************
-        Musica g1 = new Musica("Musica1", "C/Users");
-        Musica g2 = new Musica("Musica1", "C/Users");
+        Album hookMeUp = new Album(songs7, "Hook Me Up");
+        ListaDuplamente<Album> VeronicaLista = new ListaDuplamente<>();
+        VeronicaLista.inserir(hookMeUp);
+        Artista TheVeronicas = new Artista("The Veronicas", "Pop/Rock", VeronicaLista);
+        
+        //Sétimo Artista - Coldplay******************************
+        Musica cold1 = new Musica("A Sky Full of Stars", "C/Users/Coldplay");
+        Musica cold2 = new Musica("Charlie Brown", "C/Users/Coldplay");
+        Musica cold3 = new Musica("Every Teardrop Is A Waterfall", "C/Users/Coldplay");
+        Musica cold4 = new Musica("Fix You", "C/Users/Coldplay");
+        Musica cold5 = new Musica("Hymn For The Weekend", "C/Users/Coldplay");
+        Musica cold6 = new Musica("Magic", "C/Users/Coldplay");
+        Musica cold7 = new Musica("Paradise", "C/Users/Coldplay");
+        Musica cold8 = new Musica("Something Just Like This", "C/Users/Coldplay");
+        Musica cold9 = new Musica("The Scientist", "C/Users/Coldplay");
+        Musica cold10 = new Musica("Viva La Vida", "C/Users/Coldplay");
+        
         Pilha<Musica> songs8 = new Pilha<>(11);
-        songs8.inserir(g1);
-        songs8.inserir(g2);
-        Album g = new Album(songs8, "Album");
-        ListaDuplamente<Album> gg = new ListaDuplamente<>();
-        gg.inserir(g);
-        Artista ggg = new Artista("Veronicas", "Rock", gg);
+        songs8.inserir(cold1);
+        songs8.inserir(cold2);
+        songs8.inserir(cold3);
+        songs8.inserir(cold4);
+        songs8.inserir(cold5);
+        songs8.inserir(cold6);
+        songs8.inserir(cold7);
+        songs8.inserir(cold8);
+        songs8.inserir(cold9);
+        songs8.inserir(cold10);
         
-        //Oitavo Artista ****************************
-        Musica h1 = new Musica("Musica1", "C/Users");
-        Musica h2 = new Musica("Musica1", "C/Users");
+        Album greatestSongs = new Album(songs8, "Greatest Songs");
+        ListaDuplamente<Album> ColdLista = new ListaDuplamente<>();
+        ColdLista.inserir(greatestSongs);
+        Artista Coldplay = new Artista("Coldplay", "Pop/Rock", ColdLista);
+        
+        
+        //Oitavo Artista - Demi Lovato - OK
+        Musica Demi1 = new Musica("Confident", "C/Users/DemiLovato");
+        Musica Demi2 = new Musica("Cool for the Summer", "C/Users/DemiLovato");
+        Musica Demi3 = new Musica("Old Ways", "C/Users/DemiLovato");
+        Musica Demi4 = new Musica("For You", "C/Users/DemiLovato");
+        Musica Demi5 = new Musica("Stone Cold", "C/Users/DemiLovato");
+        Musica Demi6 = new Musica("Kingdom Come (feat. Iggy Azalea)", "C/Users/DemiLovato");
+        Musica Demi7 = new Musica("Waitin for You (feat. Sirah)", "C/Users/DemiLovato");
+        Musica Demi8 = new Musica("Lionheart", "C/Users/DemiLovato");
+        Musica Demi9 = new Musica("Father", "C/Users/DemiLovato");
+        Musica Demi10 = new Musica("Mr. Hughes", "C/Users/DemiLovato");
+        
         Pilha<Musica> songs9 = new Pilha<>(11);
-        songs8.inserir(h1);
-        songs8.inserir(h2);
-        Album h = new Album(songs8, "Album");
-        ListaDuplamente<Album> hh = new ListaDuplamente<>();
-        hh.inserir(h);
-        Artista hhh = new Artista("O", "Rock", hh);
+        songs9.inserir(Demi1);
+        songs9.inserir(Demi2);
+        songs9.inserir(Demi3);
+        songs9.inserir(Demi4);
+        songs9.inserir(Demi5);
+        songs9.inserir(Demi6);
+        songs9.inserir(Demi7);
+        songs9.inserir(Demi8);
+        songs9.inserir(Demi9);
+        songs9.inserir(Demi10);
+        
+        Album confident = new Album(songs9, "Confident");
+        ListaDuplamente<Album> DemiLista = new ListaDuplamente<>();
+        DemiLista.inserir(confident);
+        Artista DemiLovato = new Artista("Demi Lovato", "Pop", DemiLista);
+        
         
         // Nono Artista - Adele OK
         Musica adele1 = new Musica("Chasing Pavements", "C/Users/Adele");
@@ -140,10 +197,11 @@ public class EstruturaDeAudio {
         songs10.inserir(adele10);
         songs10.inserir(adele11);
         
-        Album a21 = new Album(songs10, "Album");
-        ListaDuplamente<Album> adelelista = new ListaDuplamente<>();
-        adelelista.inserir(a21);
-        Artista Adele = new Artista("Adele", "Soul/Pop", adelelista);
+        Album a21 = new Album(songs10, "21");
+        ListaDuplamente<Album> AdeleLista = new ListaDuplamente<>();
+        AdeleLista.inserir(a21);
+        Artista Adele = new Artista("Adele", "Soul/Pop", AdeleLista);
+        
         
         //Décimo artista  - inserindo artista Beatles com 5 albuns e 10 musicas em cada
         Musica Beatles1 = new Musica("Musica1", "C/Users/Beatles");
