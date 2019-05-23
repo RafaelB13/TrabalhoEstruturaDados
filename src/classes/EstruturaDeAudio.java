@@ -59,16 +59,110 @@ public class EstruturaDeAudio {
         gunR.inserir(gr);
         Artista guns = new Artista("Tribalhistas", "Rock", gunR);
         
-        //Quarto Artista **********************************
-        Musica c1 = new Musica("Teste1", "C/Users/Teste");
-        Musica c2 = new Musica("Teste2", "C/Users/Teste");
-        Pilha<Musica> songs5 = new Pilha<>(11);
-        songs5.inserir(c1);
-        songs5.inserir(c2);
-        Album ts = new Album(songs5, "Teste Album");
-        ListaDuplamente<Album> tst = new ListaDuplamente<>();
-        tst.inserir(ts);
-        Artista teste = new Artista("Disney", "Pop", tst);
+        //Quarto Artista - Linkin Park OK**********************************
+        Musica linkin1 = new Musica("Breaking the Habit", "C/Users/LinkinPark/Meteora");
+        Musica linkin2 = new Musica("Don't Stay", "C/Users/LinkinPark/Meteora");
+        Musica linkin3 = new Musica("Faint", "C/Users/LinkinPark/Meteora");
+        Musica linkin4 = new Musica("Figure.09", "C/Users/LinkinPark/Meteora");
+        Musica linkin5 = new Musica("Foreword", "C/Users/LinkinPark/Meteora");
+        Musica linkin6 = new Musica("Hit the Floor", "C/Users/LinkinPark/Meteora");
+        Musica linkin7 = new Musica("Lying from You", "C/Users/LinkinPark/Meteora");
+        Musica linkin8 = new Musica("Nobody's Listening", "C/Users/LinkinPark/Meteora");
+        Musica linkin9 = new Musica("Numb", "C/Users/LinkinPark/Meteora");
+        Musica linkin10 = new Musica("Somewhere I Belong", "C/Users/LinkinPark/Meteora");
+        
+        Pilha<Musica> songs51 = new Pilha<>(11);
+        songs51.inserir(linkin1);
+        songs51.inserir(linkin2);
+        songs51.inserir(linkin3);
+        songs51.inserir(linkin4);
+        songs51.inserir(linkin5);
+        songs51.inserir(linkin6);
+        songs51.inserir(linkin7);
+        songs51.inserir(linkin8);
+        songs51.inserir(linkin9);
+        songs51.inserir(linkin10);
+        Album meteora = new Album(songs51, "Meteora");
+        
+        Musica linkin11 = new Musica("A Place for My Head", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin12 = new Musica("By Myself", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin13 = new Musica("Crawling", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin14 = new Musica("Forgotten", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin15 = new Musica("In the End", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin16 = new Musica("One Step Closer", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin17 = new Musica("Papercut", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin18 = new Musica("Points of Authority", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin19 = new Musica("Runaway", "C/Users/LinkinPark/HybirdTheory");
+        Musica linkin20 = new Musica("With You", "C/Users/LinkinPark/HybirdTheory");
+        
+        Pilha<Musica> songs52 = new Pilha<>(11);
+        songs52.inserir(linkin11);
+        songs52.inserir(linkin12);
+        songs52.inserir(linkin13);
+        songs52.inserir(linkin14);
+        songs52.inserir(linkin15);
+        songs52.inserir(linkin16);
+        songs52.inserir(linkin17);
+        songs52.inserir(linkin18);
+        songs52.inserir(linkin19);
+        songs52.inserir(linkin20);
+        Album hybridTheory = new Album(songs52, "Hybrid Theory");
+        
+        Musica linkin21 = new Musica("Blackout", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin22 = new Musica("Burning In The Skies", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin23 = new Musica("Empty Spaces", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin24 = new Musica("Fallout", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin25 = new Musica("Robot Boy", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin26 = new Musica("The Radiance", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin27 = new Musica("The Requiem", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin28 = new Musica("Waiting For The End", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin29 = new Musica("When They Come For Me", "C/Users/LinkinPark/AThausandsSuns");
+        Musica linkin30 = new Musica("Wretches And Kings", "C/Users/LinkinPark/AThausandsSuns");
+        
+        Pilha<Musica> songs53 = new Pilha<>(11);
+        songs53.inserir(linkin21);
+        songs53.inserir(linkin22);
+        songs53.inserir(linkin23);
+        songs53.inserir(linkin24);
+        songs53.inserir(linkin25);
+        songs53.inserir(linkin26);
+        songs53.inserir(linkin27);
+        songs53.inserir(linkin28);
+        songs53.inserir(linkin29);
+        songs53.inserir(linkin30);
+        Album thousandSuns = new Album(songs53, "A Thousand Suns");
+        
+        Musica linkin31 = new Musica("Bleed it Out", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin32 = new Musica("Given Up", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin33 = new Musica("In Between", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin34 = new Musica("In Pieces", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin35 = new Musica("Leave Out All the Rest", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin36 = new Musica("No More Sorrow", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin37 = new Musica("Shadow of the Day", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin38 = new Musica("Valentine's Day", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin39 = new Musica("Wake", "C/Users/LinkinPark/MinutesToMidnight");
+        Musica linkin40 = new Musica("What I've Done", "C/Users/LinkinPark/MinutesToMidnight");
+        
+        Pilha<Musica> songs54 = new Pilha<>(11);
+        songs54.inserir(linkin31);
+        songs54.inserir(linkin32);
+        songs54.inserir(linkin33);
+        songs54.inserir(linkin34);
+        songs54.inserir(linkin35);
+        songs54.inserir(linkin36);
+        songs54.inserir(linkin37);
+        songs54.inserir(linkin38);
+        songs54.inserir(linkin39);
+        songs54.inserir(linkin40);
+        Album minutesTo = new Album(songs54, "Minutes To Midnight");
+        
+        ListaDuplamente<Album> LinkinLista = new ListaDuplamente<>();
+        LinkinLista.inserir(meteora);
+        LinkinLista.inserir(hybridTheory);
+        LinkinLista.inserir(thousandSuns);
+        LinkinLista.inserir(minutesTo);
+        
+        Artista LinkinPark = new Artista("Linkin Park", "Rock", LinkinLista);
         
         //Quinto Artista - Oasis OK *******************************
         Musica oasis1 = new Musica("Cigarettes & Alchohol", "C/Users/Oasis");
