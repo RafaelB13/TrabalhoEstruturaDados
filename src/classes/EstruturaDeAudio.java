@@ -114,16 +114,36 @@ public class EstruturaDeAudio {
         hh.inserir(h);
         Artista hhh = new Artista("O", "Rock", hh);
         
-        // Nono Artista
-        Musica avril1 = new Musica("Musica1", "C/Users");
-        Musica avril2 = new Musica("Musica1", "C/Users");
-        Pilha<Musica> songs10 = new Pilha<>(11);
-        songs10.inserir(avril1);
-        songs10.inserir(avril2);
-        Album candy = new Album(songs10, "Album");
-        ListaDuplamente<Album> aa = new ListaDuplamente<>();
-        aa.inserir(candy);
-        Artista aaa = new Artista("Avril", "Rock", aa);
+        // Nono Artista - Adele OK
+        Musica adele1 = new Musica("Chasing Pavements", "C/Users/Adele");
+        Musica adele2 = new Musica("Don't You Remember", "C/Users/Adele");
+        Musica adele3 = new Musica("I'll Be Waiting", "C/Users/Adele");
+        Musica adele4 = new Musica("Lovesong", "C/Users/Adele");
+        Musica adele5 = new Musica("One and Only", "C/Users/Adele");
+        Musica adele6 = new Musica("Rolling in the Deep", "C/Users/Adele");
+        Musica adele7 = new Musica("Rumour Has It", "C/Users/Adele");
+        Musica adele8 = new Musica("Set Fire to the Rain", "C/Users/Adele");
+        Musica adele9 = new Musica("Someone Like You", "C/Users/Adele");
+        Musica adele10 = new Musica("Take It All", "C/Users/Adele");
+        Musica adele11 = new Musica("Turning Tables", "C/Users/Adele");
+        
+        Pilha<Musica> songs10 = new Pilha<>(12);
+        songs10.inserir(adele1);
+        songs10.inserir(adele2);
+        songs10.inserir(adele3);
+        songs10.inserir(adele4);
+        songs10.inserir(adele5);
+        songs10.inserir(adele6);
+        songs10.inserir(adele7);
+        songs10.inserir(adele8);
+        songs10.inserir(adele9);
+        songs10.inserir(adele10);
+        songs10.inserir(adele11);
+        
+        Album a21 = new Album(songs10, "Album");
+        ListaDuplamente<Album> adelelista = new ListaDuplamente<>();
+        adelelista.inserir(a21);
+        Artista Adele = new Artista("Adele", "Soul/Pop", adelelista);
         
         //Décimo artista  - inserindo artista Beatles com 5 albuns e 10 musicas em cada
         Musica Beatles1 = new Musica("Musica1", "C/Users/Beatles");
@@ -166,18 +186,18 @@ public class EstruturaDeAudio {
           bb.inserir(beat3);
            bb.inserir(beat4);
             bb.inserir(beat5);
-        Artista bbb = new Artista("Beatles", "Rock", aa);
-        
-        arvore.inserirNo(redhot);
-         arvore.inserirNo(muse);
-          arvore.inserirNo(guns);
-           arvore.inserirNo(teste);
-            arvore.inserirNo(mmm);
-             arvore.inserirNo(fff);
-              arvore.inserirNo(ggg);
-               arvore.inserirNo(hhh);
-                arvore.inserirNo(aaa);
-                 arvore.inserirNo(bbb);
+        Artista bbb = new Artista("Beatles", "Rock", bb);
+        // deixei comentado para evitar o erro
+//        arvore.inserirNo(redhot);
+//         arvore.inserirNo(muse);
+//          arvore.inserirNo(guns);
+//           arvore.inserirNo(teste);
+//            arvore.inserirNo(mmm);
+//             arvore.inserirNo(fff);
+//              arvore.inserirNo(ggg);
+//               arvore.inserirNo(hhh);
+//                arvore.inserirNo(aaa);
+//                 arvore.inserirNo(bbb);
         
         //FIZ ALGUMAS ALTERAÇÕES NAS CLASSES ALBUM E ARTISTA E NO TOSTRING DE ALBUM PRA TESTE NA INTERFACE
         //EXECUTA O PROJETO TODO PRA VC DA UMA OLHADA COMO FICOU
