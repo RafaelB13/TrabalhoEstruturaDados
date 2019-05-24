@@ -143,6 +143,25 @@ public class Arvore<Artista extends Comparable<Artista>> {
 		
 		return null;
 	}
+        
+        public No buscaNo(Artista valor) {
+            //No no = new No((Comparable) raiz);
+		return buscarNo((Comparable) valor, this.raiz);
+	}
+
+    public No buscarNo(Comparable dado, No no) {
+        
+        if (no == null) {
+            return null;
+        } else if (no.obterValor().compareTo(dado)==0){
+            return no;           
+        }else if (dado.compareTo(no.obterValor()) == 1){
+            return buscarNo(dado, no.obterNoDireito());
+        } else{
+            // vai para a esquerda
+            return buscarNo(dado, no.obterNoEsquerdo());
+        }
+    }
 	
 	
 	public No getSucessor(No atual, Boolean primeiraVez) {
