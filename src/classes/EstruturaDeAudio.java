@@ -12,10 +12,11 @@ public class EstruturaDeAudio {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
         // TODO code application logic here
 
-        Arvore<Artista> arvore = new Arvore<>();
+        Arvore<Artista> arvore = Arvore.getInstancia();
         
         //Primeiro Artista ******************************
         Musica m1 = new Musica("Can't Stop", "C:/Users/Red Hot");

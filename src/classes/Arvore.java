@@ -4,8 +4,17 @@ package classes;
 
 public class Arvore<Artista extends Comparable<Artista>> {
 	No raiz;
+        
+        private static Arvore arvore;
+        
+        public static Arvore getInstancia(){
+            if(arvore == null)
+                arvore = new Arvore();
+            
+            return arvore;
+        }
 	
-	public Arvore() {
+	private Arvore() {
 		this.raiz = null;
 	}
 	
