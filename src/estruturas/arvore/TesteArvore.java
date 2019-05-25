@@ -12,7 +12,7 @@ public class TesteArvore {
     
     
     public static void main(String[] args) {
-        Arvore<Integer> n = new Arvore<>();
+        Arvore<Integer> n = Arvore.getInstancia();
         
     }
 

@@ -15,7 +15,7 @@ public class EstruturaDeAudio {
     
     public static void main(String[] args) {
         // TODO code application logic here
-
+         
         Arvore<Artista> arvore = Arvore.getInstancia();
         
         //Primeiro Artista ******************************

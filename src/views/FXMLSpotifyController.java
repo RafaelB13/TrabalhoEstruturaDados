@@ -144,7 +144,7 @@ public class FXMLSpotifyController implements Initializable {
     }
 
     public void listaDeArtistas() {
-        Arvore arvore = new Arvore();
+        Arvore arvore = Arvore.getInstancia();
 
         //Primeiro Artista ******************************
         Musica m1 = new Musica("Can't Stop", "C:/Users/Red Hot");

@@ -16,6 +16,7 @@ public class Tela1 extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
           
+        
         Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaPrincipal.fxml"));
         
         
