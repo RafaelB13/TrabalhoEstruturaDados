@@ -14,12 +14,21 @@ import java.util.ArrayList;
  */
 public class Artista implements Comparable<Artista>{
     
-    private String cantor;
-    private String genero;
-    public ListaDuplamente<Album> albuns;
+    public static String cantor;
+    private static String genero;
+    public static ListaDuplamente<Album> albuns;
     //incluir lista de albuns
-    
-    
+
+
+    static Artista a;
+    public static Artista getInstance(){
+        if(a == null)
+            a = new Artista(cantor, genero, albuns);
+
+        return a;
+
+
+    }
 
     public Artista(String cantor, String genero, ListaDuplamente<Album> albuns) {
         this.cantor = cantor;
@@ -27,8 +36,11 @@ public class Artista implements Comparable<Artista>{
         this.albuns = albuns;
     }
 
-    public Artista() {
+    public Artista(){
+
     }
+
+
 
     public String getCantor() {
         return cantor;

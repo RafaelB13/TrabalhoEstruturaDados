@@ -14,7 +14,7 @@ public class Album implements Comparable<Album>{
     //Tipo pilha para armazenar as musicas
     public Pilha<Musica> songs;// corrigir o vetor para receber musicas 
     //o album recebe 10 musicas
-    private String titulo;
+    public String titulo;
     
     
     
@@ -41,7 +41,13 @@ public class Album implements Comparable<Album>{
 
     @Override
     public int compareTo(Album t) {
-        return 0;
+
+        if(t.titulo.compareTo(this.titulo) != 0)
+            return -1;
+        else if(t.titulo.compareTo(this.titulo) == 0)
+            return 0;
+        else
+            return 1;
     }
     
     

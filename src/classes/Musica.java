@@ -37,7 +37,7 @@ public class Musica {
 
     @Override
     public String toString() {
-        return "\n    " + nome + ", Local: " + local ;
+        return "\n    " + nome ; //+ ", Local: " + local
     }
     
     
