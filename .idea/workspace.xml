@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6cae52a2-2ffa-4258-b6e6-87ad9aa52b39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/Artista.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/Artista.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/Arvore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/Arvore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/EstruturaDeAudio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/classes/EstruturaDeAudio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/estruturas/arvore/TesteArvore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/estruturas/arvore/TesteArvore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/FXMLSpotifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/FXMLSpotifyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/FXMLTelaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/FXMLTelaPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/Tela1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeAudio1/views/Tela1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Artista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Arvore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Arvore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/EstruturaDeAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/EstruturaDeAudio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Musica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/estruturas/arvore/TesteArvore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/estruturas/arvore/TesteArvore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/FXMLSpotifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FXMLSpotifyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/FXMLTelaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FXMLTelaPrincipal.fxml" afterDir="false" />
     </list>
@@ -31,15 +20,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/FXMLSpotifyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="166" column="38" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+            <state relative-caret-position="233">
+              <caret line="85" column="54" lean-forward="true" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
               <folding>
-                <element signature="e#3115#3123#0" expanded="true" />
-                <element signature="e#4251#4252#0" expanded="true" />
-                <element signature="e#4301#4302#0" expanded="true" />
-                <element signature="e#4351#4352#0" expanded="true" />
-                <element signature="e#4402#4403#0" expanded="true" />
+                <element signature="e#3243#3244#0" expanded="true" />
+                <element signature="e#3468#3469#0" expanded="true" />
+                <element signature="e#6107#6108#0" expanded="true" />
+                <element signature="e#6210#6211#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/EstruturaDeAudio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="72" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -60,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/estruturas/listaduplamente/ListaDuplamente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2036">
+            <state relative-caret-position="138">
               <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
@@ -69,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Album.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="138">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -78,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Tela1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="391">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -87,12 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Arvore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-449">
+            <state relative-caret-position="3312">
               <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-              <folding>
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -100,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Artista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="77" column="10" lean-forward="true" selection-start-line="77" selection-start-column="10" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="276">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#921#922#0" expanded="true" />
@@ -160,7 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,11 +195,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558930595176" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559015235657" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -274,9 +267,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49590835" visible="true" weight="0.16490166" />
-      <window_info id="Structure" order="1" sideWeight="0.5040917" side_tool="true" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4942717" visible="true" weight="0.16717096" />
+      <window_info id="Structure" order="1" sideWeight="0.5057283" side_tool="true" weight="0.16717096" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -317,21 +311,21 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build/classes/views/FXMLTelaPrincipal.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="66" column="87" selection-start-line="66" selection-start-column="87" selection-end-line="66" selection-end-column="87" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/FXMLSpotify.fxml" />
     <entry file="file://$PROJECT_DIR$/src/views/FXMLTelaPrincipal.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
           <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/estruturas/Pilha.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -347,35 +341,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/EstruturaDeAudio.java">
+    <entry file="file://$PROJECT_DIR$/src/classes/Musica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="389" column="45" selection-start-line="389" selection-start-column="45" selection-end-line="389" selection-end-column="45" />
+        <state relative-caret-position="115">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/estruturas/listaduplamente/ListaDuplamente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Tela1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="391">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Arvore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-449">
+        <state relative-caret-position="3312">
           <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-          <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Artista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="77" column="10" lean-forward="true" selection-start-line="77" selection-start-column="10" selection-end-line="82" selection-end-column="21" />
+        <state relative-caret-position="276">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#921#922#0" expanded="true" />
@@ -396,41 +404,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/estruturas/listaduplamente/ListaDuplamente.java">
+    <entry file="file://$PROJECT_DIR$/src/classes/EstruturaDeAudio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2036">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Album.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Musica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="72" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/FXMLSpotifyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="166" column="38" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+        <state relative-caret-position="233">
+          <caret line="85" column="54" lean-forward="true" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
           <folding>
-            <element signature="e#3115#3123#0" expanded="true" />
-            <element signature="e#4251#4252#0" expanded="true" />
-            <element signature="e#4301#4302#0" expanded="true" />
-            <element signature="e#4351#4352#0" expanded="true" />
-            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#3243#3244#0" expanded="true" />
+            <element signature="e#3468#3469#0" expanded="true" />
+            <element signature="e#6107#6108#0" expanded="true" />
+            <element signature="e#6210#6211#0" expanded="true" />
           </folding>
         </state>
       </provider>

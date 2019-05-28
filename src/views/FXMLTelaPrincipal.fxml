@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="744.0" style="-fx-background-color: #f1f8e9;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLSpotifyController">
+<AnchorPane id="AnchorPane" prefHeight="724.0" prefWidth="744.0" style="-fx-background-color: #f1f8e9;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLSpotifyController">
     <stylesheets>
         <URL value="@fxmlspotify.css" />
     </stylesheets>
@@ -46,51 +46,92 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="115.0" layoutY="85.0" prefHeight="422.0" prefWidth="574.0" style="-fx-background-color: #f1f8e9;">
+      <Pane layoutX="115.0" layoutY="85.0" prefHeight="548.0" prefWidth="574.0" style="-fx-background-color: #f1f8e9;">
          <children>
-            <TextField fx:id="txtPesquisar" alignment="CENTER" focusTraversable="false" layoutX="69.0" layoutY="14.0" prefHeight="30.0" prefWidth="412.0" promptText="Pesquisar Artistas">
+            <TextField fx:id="txtPesquisar" alignment="CENTER" focusTraversable="false" layoutX="69.0" layoutY="4.0" prefHeight="30.0" prefWidth="412.0" promptText="Pesquisar Artistas">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="86.0" layoutY="51.0" prefHeight="25.0" prefWidth="189.0" text="Listagem de Artistas">
-               <font>
-                  <Font name="Berlin Sans FB" size="21.0" />
-               </font>
-            </Label>
-            <Button fx:id="btnPesquisar" layoutX="495.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#buscaDeArtista" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #FFF;" text="OK">
+            <Button fx:id="btnPesquisar" layoutX="495.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#buscaDeArtista" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #FFF; -fx-border-style: solid; -fx-border-radius: 5px; -fx-border-color: #898989;" text="OK">
                <effect>
                   <Blend />
                </effect>
             </Button>
-            <Label fx:id="nomeArtista" alignment="TOP_LEFT" layoutX="14.0" layoutY="84.0" onMouseClicked="#exibirAlbuns" prefHeight="17.0" prefWidth="546.0" text="Artista" wrapText="true">
+            <Label fx:id="nomeArtista" alignment="CENTER" layoutX="80.0" layoutY="115.0" onMouseClicked="#exibirAlbuns" prefHeight="21.0" prefWidth="391.0" text="Artista" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="listaMusicas" alignment="TOP_LEFT" layoutX="82.0" layoutY="171.0" prefHeight="76.0" prefWidth="127.0" text="Label" wrapText="true">
+            <Label fx:id="listaMusicas" alignment="TOP_LEFT" layoutX="57.0" layoutY="175.0" prefHeight="171.0" prefWidth="157.0" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="album1" layoutX="22.0" layoutY="131.0" text="Album">
+            <Label fx:id="album1" layoutX="22.0" layoutY="151.0" prefHeight="16.0" prefWidth="177.0">
                <font>
-                  <Font name="Berlin Sans FB" size="25.0" />
+                  <Font name="Berlin Sans FB" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="album2" layoutX="22.0" layoutY="257.0" text="Album">
+            <Label fx:id="album2" layoutX="26.0" layoutY="355.0" prefHeight="16.0" prefWidth="157.0">
                <font>
-                  <Font name="Berlin Sans FB" size="25.0" />
+                  <Font name="Berlin Sans FB" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="listaMusicas2" alignment="TOP_LEFT" layoutX="82.0" layoutY="298.0" prefHeight="76.0" prefWidth="127.0" text="Label" wrapText="true">
+            <Label fx:id="listaMusicas2" alignment="TOP_LEFT" layoutX="62.0" layoutY="398.0" prefHeight="164.0" prefWidth="157.0" wrapText="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="album3" layoutX="351.0" layoutY="151.0" prefHeight="16.0" prefWidth="177.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="listaMusicas3" alignment="TOP_LEFT" layoutX="382.0" layoutY="175.0" prefHeight="171.0" prefWidth="157.0" wrapText="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnA" layoutX="22.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="A" />
+            <Button fx:id="btnB" layoutX="63.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="B" />
+            <Button fx:id="btnC" layoutX="104.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="C" />
+            <Button fx:id="btnD" layoutX="145.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="D" />
+            <Button fx:id="btnE" layoutX="187.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="E" />
+            <Button fx:id="btnF" layoutX="228.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="F" />
+            <Button fx:id="btnG" layoutX="269.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="G" />
+            <Button fx:id="btnH" layoutX="310.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="H" />
+            <Button fx:id="btnI" layoutX="351.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="I" />
+            <Button fx:id="btnJ" layoutX="392.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="J" />
+            <Button fx:id="btnK" layoutX="433.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="K" />
+            <Button fx:id="btnL" layoutX="474.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="L" />
+            <Button fx:id="btnM" layoutX="515.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="M" />
+            <Button fx:id="btnN" layoutX="23.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="N" />
+            <Button fx:id="btnO" layoutX="64.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="O" />
+            <Button fx:id="btnP" layoutX="105.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="P" />
+            <Button fx:id="btnQ" layoutX="147.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Q" />
+            <Button fx:id="btnR" layoutX="188.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="R" />
+            <Button fx:id="btnS" layoutX="229.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="S" />
+            <Button fx:id="btnT" layoutX="270.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="T" />
+            <Button fx:id="btnU" layoutX="311.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="U" />
+            <Button fx:id="btnV" layoutX="352.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="V" />
+            <Button fx:id="btnW" layoutX="393.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="W" />
+            <Button fx:id="btnX" layoutX="434.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="X" />
+            <Button fx:id="btnY" layoutX="475.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Y" />
+            <Button fx:id="btnZ" layoutX="515.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Z" />
+            <Label fx:id="album4" layoutX="349.0" layoutY="355.0" prefHeight="16.0" prefWidth="177.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="listaMusicas4" alignment="TOP_LEFT" layoutX="371.0" layoutY="373.0" prefHeight="164.0" prefWidth="157.0" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB" size="13.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="-1.0" layoutY="512.0" prefHeight="100.0" prefWidth="674.0" style="-fx-background-color: #62ee83;">
+      <Pane layoutX="-1.0" layoutY="633.0" prefHeight="100.0" prefWidth="674.0" style="-fx-background-color: #62ee83;">
          <children>
             <ImageView fitHeight="48.0" fitWidth="71.0" layoutX="407.0" layoutY="38.0" nodeOrientation="INHERIT" onMouseClicked="#play" pickOnBounds="true" preserveRatio="true">
                <image>

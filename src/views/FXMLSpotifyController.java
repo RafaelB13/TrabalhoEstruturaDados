@@ -52,42 +52,65 @@ import javax.swing.JOptionPane;
  */
 public class FXMLSpotifyController implements Initializable {
 
-
     @FXML
-    private Label teste, status, nomeArtista, labelArtistas, album1, album2, album3, album4, listaMusicas, listaMusicas2;
+    private Label teste, status, nomeArtista, labelArtistas, album1, album2, album3, album4,
+            listaMusicas, listaMusicas2, listaMusicas3, listaMusicas4;
     @FXML
     private ImageView btnPause, btnStop, btnPlay;
     @FXML
     private TextField txtPesquisar;
     @FXML
-    private Button btnPesquisar;
+    private Button btnPesquisar, btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ,
+            btnK, btnL, btnM, btnN, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ;
 
-    
+    Pilha<Musica> songs1, songs2, songs3, songs4, songs5, songs6, songs7, songs8, songs9, songs10;
+    Album a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13;
+    ListaDuplamente<Album> lAlbum1, lAlbum2, lAlbum3, lAlbum4, lAlbum5, lAlbum6, lAlbum7, lAlbum8, lAlbum9, lAlbum10;
 
-    
     Arvore arvore = Arvore.getInstancia();
-    Artista artista = Artista.getInstance();
-
 
     @FXML
     private void buscaDeArtista(MouseEvent event) {
+        listaDeArtistas();
 
-        listaDeArtistas(event);
+        Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", lAlbum2);
+        Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
+        Artista demilovato = new Artista("Demi Lovato", "Pop", lAlbum3);
+
+        arvore.inserirNo(linkinPark); 
+        arvore.inserirNo(demilovato);
+        arvore.inserirNo(redhot);
+
+        if (txtPesquisar.getText().equals(linkinPark.getCantor()) || txtPesquisar.getText().equals("l")) {
+
+            nomeArtista.setText(arvore.buscaNo(linkinPark).toString());
+            album1.setText(a1.titulo);
+            listadeMusicas(songs1);
+            
+        }else if(txtPesquisar.getText().equals(redhot.getCantor()) || txtPesquisar.getText().equals("r")){
+            nomeArtista.setText(arvore.buscaNo(demilovato).toString());
+            album1.setText(a2.titulo);
+            listadeMusicas(songs2);
+        }else if(txtPesquisar.getText().equals("") ){
+            nomeArtista.setText("Não Encontrado");
+            album1.setText("");
+            album2.setText("");
+            album3.setText("");
+            album4.setText("");
+            listaMusicas.setText("");
+        }    
 
     }
-
 
     @FXML
     private void exibirArtista(MouseEvent event) {
-       
+
     }
-    
+
     @FXML
-    private void exibirAlbuns(MouseEvent event){
-        
+    private void exibirAlbuns(MouseEvent event) {
+
     }
-
-
 
     @FXML
     public void pause(MouseEvent event) {
@@ -97,7 +120,7 @@ public class FXMLSpotifyController implements Initializable {
     //Botão Stop
     @FXML
     public void stop(MouseEvent event) {
-      
+
         status.setText("Parado");
     }
 
@@ -108,123 +131,72 @@ public class FXMLSpotifyController implements Initializable {
     }
     //Fim dos Eventos da tela de reprodução
 
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+    }
 
+    public void listaDeArtistas() {
+        Musica linkin1 = new Musica("Breaking the Habit", "C/Users/LinkinPark/Meteora");
+        Musica linkin2 = new Musica("Don't Stay", "C/Users/LinkinPark/Meteora");
+        Musica linkin3 = new Musica("Faint", "C/Users/LinkinPark/Meteora");
+        Musica linkin4 = new Musica("Figure.09", "C/Users/LinkinPark/Meteora");
+        Musica linkin5 = new Musica("Foreword", "C/Users/LinkinPark/Meteora");
+        Musica linkin6 = new Musica("Hit the Floor", "C/Users/LinkinPark/Meteora");
+        Musica linkin7 = new Musica("Lying from You", "C/Users/LinkinPark/Meteora");
+        Musica linkin8 = new Musica("Nobody's Listening", "C/Users/LinkinPark/Meteora");
+        Musica linkin9 = new Musica("Numb", "C/Users/LinkinPark/Meteora");
+        Musica linkin10 = new Musica("Somewhere I Belong", "C/Users/LinkinPark/Meteora");
+        songs1 = new Pilha<>(11);
+        songs1.inserir(linkin1);
+        songs1.inserir(linkin2);
+        songs1.inserir(linkin3);
+        songs1.inserir(linkin4);
+        songs1.inserir(linkin5);
+        songs1.inserir(linkin6);
+        songs1.inserir(linkin7);
+        songs1.inserir(linkin8);
+        songs1.inserir(linkin9);
+        songs1.inserir(linkin10);
+        a1 = new Album(songs2, "Meteora");
+        lAlbum1 = new ListaDuplamente<>();
+        lAlbum1.inserir(a1);
+
+//        Primeiro Artista ******************************
+        Musica r1 = new Musica("Can't Stop", "C:/Users/Red Hot");
+        Musica r2 = new Musica("By the Way", "C:/Users/Red Hot");
+        Musica r3 = new Musica("Universally Speaking", "C:/Users/Red Hot");
+        songs2 = new Pilha<>(4);
+        songs2.inserir(r1);
+        songs2.inserir(r2);
+        songs2.inserir(r3);
+        a2 = new Album(songs2, "Californication");
+        lAlbum2 = new ListaDuplamente<>();
+        lAlbum2.inserir(a2);
+        
+        
+        Musica d1 = new Musica("Musica Demi Lovato ", "C:/");
+        Musica d2 = new Musica("Musica Demi Lovato ", "C:/");
+        songs3 = new Pilha<>(3);
+        songs3.inserir(d1);
+        songs3.inserir(d2);
+        a3 = new Album(songs3, "Album Demi");
+        lAlbum3 = new ListaDuplamente<>();
+        lAlbum3.inserir(a3);
+    
 
 
     }
 
-    public void listaDeArtistas(MouseEvent event) {
-        //Primeiro Artista ******************************
-        Musica m1 = new Musica("Can't Stop", "C:/Users/Red Hot");
-        Musica m2 = new Musica("By the Way", "C:/Users/Red Hot");
-        Musica m3 = new Musica("Universally Speaking", "C:/Users/Red Hot");
-        Pilha<Musica> songs1 = new Pilha<Musica>(11);
-        songs1.inserir(m1);
-        songs1.inserir(m2);
-        songs1.inserir(m3);
-        Pilha<Musica> songs2 = new Pilha<Musica>(11);
-        songs2.inserir(m1);
-        songs2.inserir(m2);
-        songs2.inserir(m3);
-        Album a1 = new Album(songs1, "Greates Hits");
-        Album a2 = new Album(songs2, "Californication");
-        ListaDuplamente<Album> album = new ListaDuplamente<>();
-        album.inserir(a1);
-        album.inserir(a2);
-        Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", album);
-
-        System.out.println(album.buscar(a2));
-        arvore.inserirNo(redhot);
-
-
-        String busca = txtPesquisar.getText();
-        if (busca.equals("r") || busca.equals("Red hot")) {
-            nomeArtista.setText(arvore.buscaNo(redhot).toString());
-                album1.setText(a1.toString());
-                album2.setText(a2.toString());
-
-            listadeMusicas(songs1);
-            listadeMusicas2(songs2);
-
-
-
-        }else if (busca.equals("")) {
-            nomeArtista.setText("Não encontrado");
-            album1.setText("Album");
-            album2.setText("Album");
-            listaMusicas.setText("");
-            listaMusicas2.setText("");
-        }else {
-            nomeArtista.setText("Insira um nome válido");
-            album1.setText("Album");
-            album2.setText("Album");
-            listaMusicas2.setText("");
-            listaMusicas.setText("");
-            listaMusicas2.setText("");
-        }
-    }
-
-    public void listadeMusicas(Pilha<Musica> p){
+    public void listadeMusicas(Pilha<Musica> p) {
         listaMusicas.setText(p.toString());
     }
-    public void listadeMusicas2(Pilha<Musica> p){
+
+    public void listadeMusicas2(Pilha<Musica> p) {
         listaMusicas2.setText(p.toString());
     }
 
-
-
-
-
-
-
-
-
-
-
-//    //Primeiro Artista ******************************
-//    Musica m1 = new Musica("Can't Stop", "C:/Users/Red Hot");
-//    Musica m2 = new Musica("By the Way", "C:/Users/Red Hot");
-//    Musica m3 = new Musica("Universally Speaking", "C:/Users/Red Hot");
-//    Pilha<Musica> songs1 = new Pilha<Musica>(11);
-//        songs1.inserir(m1);
-//        songs1.inserir(m2);
-//        songs1.inserir(m3);
-//    Pilha<Musica> songs2 = new Pilha<Musica>(11);
-//        songs2.inserir(m1);
-//        songs2.inserir(m2);
-//        songs2.inserir(m3);
-//    Album a1 = new Album(songs1, "Greates Hits");
-//    Album a2 = new Album(songs2, "Californication");
-//    ListaDuplamente<Album> album = new ListaDuplamente<>();
-//        album.inserir(a1);
-//        album.inserir(a2);
-//    Artista redhot = new Artista("Red Hot", "Rock", album);
 //
-//    //Segundo Artista ************************************************
-//    Musica n1 = new Musica("Starlight", "C:/Users/Muse");
-//    Musica n2 = new Musica("Supermassive Black Hole", "C:/Users/Muse");
-//    Pilha<Musica> songs3 = new Pilha<>(11);
-//        songs3.inserir(n1);
-//        songs3.inserir(n2);
-//    Album bhr = new Album(songs3, "Black Holes and Revelations");
-//    ListaDuplamente<Album> bh = new ListaDuplamente<>();
-//        bh.inserir(bhr);
-//    Artista muse = new Artista("Muse", "Rock", bh);
-//
-//    //Terceiro buscaDeArtista *******************************
-//    Musica b1 = new Musica("Patience", "C:/Users/Guns");
-//    Musica b2 = new Musica("Paradise City", "C:/Users/Guns");
-//    Pilha<Musica> song4 = new Pilha<>(11);
-//        song4.inserir(b1);
-//        song4.inserir(b2);
-//    Album gr = new Album(song4, "appetite for destruction");
-//    ListaDuplamente<Album> gunR = new ListaDuplamente<>();
-//        gunR.inserir(gr);
-//    Artista guns = new Artista("Tribalhistas", "Rock", gunR);
 //
 //    //Quarto Artista **********************************
 //    Musica c1 = new Musica("Teste1", "C/Users/Teste");
@@ -346,6 +318,4 @@ public class FXMLSpotifyController implements Initializable {
 //        arvore.inserirNo(hhh);
 //        arvore.inserirNo(aaa);
 //        arvore.inserirNo(bbb);
-
-
 }
