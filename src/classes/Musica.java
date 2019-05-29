@@ -4,7 +4,7 @@ package classes;
 
 public class Musica {
     private String nome;
-    private String local;
+    public static String local;
 
     public Musica(String nome, String local) {
         this.nome = nome;

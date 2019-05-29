@@ -44,14 +44,12 @@ public class Pilha<Musica> {
 	    
 		return false;
 	}
-
+       
 	/**
 	 * Remove um elemento da pilha, se ela n�o esiver vazia
 	 * @return retorna o elemento se a opera��o foi bem sucedida
 	 */
 	public Musica remover() {
-		
-		
 		if(!this.estaVazia()) {			
 			return arrayPilha[topo--];
 			

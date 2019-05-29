@@ -6,43 +6,22 @@
 package views;
 
 import classes.*;
-import com.sun.javafx.beans.event.AbstractNotifyListener;
-import com.sun.javafx.binding.BindingHelperObserver;
 import estruturas.Pilha;
 import estruturas.listaduplamente.ListaDuplamente;
+import jaco.mp3.player.MP3Player;
+import java.io.File;
 
-import java.io.IOException;
 import java.net.URL;
-
-import static java.util.Collections.list;
+import java.nio.file.Paths;
+import java.util.Arrays;
 
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import estruturas.listaduplamente.NoL;
-import javafx.application.Application;
-import javafx.beans.Observable;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -69,6 +48,20 @@ public class FXMLSpotifyController implements Initializable {
 
     Arvore arvore = Arvore.getInstancia();
 
+    MP3Player player;
+    File songFile;
+    String diretorio;
+    String path;
+    Musica linkin1 = new Musica("Breaking the Habit", "src\\musicas\\breaking_the_habit.mp3");
+    private void reproducao(String local) {
+
+    }
+
+    public MP3Player mP3Player() {
+        MP3Player mP3Player = new MP3Player();
+        return mP3Player;
+    }
+
     @FXML
     private void buscaDeArtista(MouseEvent event) {
         listaDeArtistas();
@@ -77,7 +70,7 @@ public class FXMLSpotifyController implements Initializable {
         Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
         Artista demilovato = new Artista("Demi Lovato", "Pop", lAlbum3);
 
-        arvore.inserirNo(linkinPark); 
+        arvore.inserirNo(linkinPark);
         arvore.inserirNo(demilovato);
         arvore.inserirNo(redhot);
 
@@ -86,19 +79,20 @@ public class FXMLSpotifyController implements Initializable {
             nomeArtista.setText(arvore.buscaNo(linkinPark).toString());
             album1.setText(a1.titulo);
             listadeMusicas(songs1);
-            
-        }else if(txtPesquisar.getText().equals(redhot.getCantor()) || txtPesquisar.getText().equals("r")){
+            listaMusicas.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> play(event));
+ 
+        } else if (txtPesquisar.getText().equals(redhot.getCantor()) || txtPesquisar.getText().equals("r")) {
             nomeArtista.setText(arvore.buscaNo(demilovato).toString());
             album1.setText(a2.titulo);
             listadeMusicas(songs2);
-        }else if(txtPesquisar.getText().equals("") ){
+        } else if (txtPesquisar.getText().equals("")) {
             nomeArtista.setText("Não Encontrado");
             album1.setText("");
             album2.setText("");
             album3.setText("");
             album4.setText("");
             listaMusicas.setText("");
-        }    
+        }
 
     }
 
@@ -115,29 +109,45 @@ public class FXMLSpotifyController implements Initializable {
     @FXML
     public void pause(MouseEvent event) {
         status.setText("Pausado");
+        player.pause();
     }
 
     //Botão Stop
     @FXML
     public void stop(MouseEvent event) {
-
         status.setText("Parado");
+        player.stop();
     }
 
     //Botão Play
     @FXML
     public void play(MouseEvent event) {
-        status.setText("Reproduzindo");
+        status.setText("Reproduzindo: " + "Breaking The Habit");
+        player.play();
     }
     //Fim dos Eventos da tela de reprodução
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        try {
+            
+            //Referencia do local da musica
+            songFile = new File(linkin1.getLocal());
+            String fileName = songFile.getName();
+
+            player = mP3Player();
+
+            player.addToPlayList(songFile);
+            path = Paths.get(".").toAbsolutePath().normalize().toString();
+
+        } catch (Exception e) {
+            System.out.println("Erro: "+e.getMessage());
+        }
 
     }
 
     public void listaDeArtistas() {
-        Musica linkin1 = new Musica("Breaking the Habit", "C/Users/LinkinPark/Meteora");
+        linkin1 = new Musica("Breaking the Habit", "C/Users/LinkinPark/Meteora");
         Musica linkin2 = new Musica("Don't Stay", "C/Users/LinkinPark/Meteora");
         Musica linkin3 = new Musica("Faint", "C/Users/LinkinPark/Meteora");
         Musica linkin4 = new Musica("Figure.09", "C/Users/LinkinPark/Meteora");
@@ -173,8 +183,7 @@ public class FXMLSpotifyController implements Initializable {
         a2 = new Album(songs2, "Californication");
         lAlbum2 = new ListaDuplamente<>();
         lAlbum2.inserir(a2);
-        
-        
+
         Musica d1 = new Musica("Musica Demi Lovato ", "C:/");
         Musica d2 = new Musica("Musica Demi Lovato ", "C:/");
         songs3 = new Pilha<>(3);
@@ -183,8 +192,6 @@ public class FXMLSpotifyController implements Initializable {
         a3 = new Album(songs3, "Album Demi");
         lAlbum3 = new ListaDuplamente<>();
         lAlbum3.inserir(a3);
-    
-
 
     }
 
