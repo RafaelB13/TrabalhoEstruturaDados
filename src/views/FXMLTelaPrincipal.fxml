@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
@@ -61,12 +62,12 @@
             </Button>
             <Label fx:id="nomeArtista" alignment="CENTER" layoutX="80.0" layoutY="115.0" onMouseClicked="#exibirAlbuns" prefHeight="21.0" prefWidth="391.0" text="Artista" wrapText="true">
                <font>
-                  <Font name="Berlin Sans FB" size="19.0" />
+                  <Font name="Berlin Sans FB" size="34.0" />
                </font>
             </Label>
-            <Label fx:id="album1" layoutX="187.0" layoutY="159.0" prefHeight="16.0" prefWidth="177.0" style="-fx-border-style: solid;">
+            <Label fx:id="album1" alignment="CENTER" layoutX="187.0" layoutY="165.0" prefHeight="25.0" prefWidth="177.0" style="-fx-border-style: solid;" text="Album">
                <font>
-                  <Font name="Berlin Sans FB" size="14.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
             </Label>
             <Label fx:id="album3" layoutX="26.0" layoutY="355.0" prefHeight="16.0" prefWidth="157.0">
@@ -105,8 +106,10 @@
             <Button fx:id="btnX" layoutX="434.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="X" />
             <Button fx:id="btnY" layoutX="475.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Y" />
             <Button fx:id="btnZ" layoutX="515.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Z" />
-            <Separator layoutX="21.0" layoutY="135.0" prefHeight="3.0" prefWidth="545.0" />
-            <Label fx:id="musicasAlbum" layoutX="183.0" layoutY="191.0" prefHeight="229.0" prefWidth="216.0" text="Label" />
+            <Separator layoutX="21.0" layoutY="155.0" prefHeight="3.0" prefWidth="545.0" />
+            <Button fx:id="obterAlbumAnterior" layoutX="106.0" layoutY="165.0" mnemonicParsing="false" text="Anterior" />
+            <Button fx:id="btnObterProximoALbum" layoutX="383.0" layoutY="165.0" mnemonicParsing="false" text="Proximo" />
+            <ListView fx:id="listViewMusicas" layoutX="23.0" layoutY="198.0" prefHeight="331.0" prefWidth="493.0" style="fx-font-family: Arial;" />
          </children>
       </Pane>
       <Pane layoutX="-1.0" layoutY="617.0" prefHeight="100.0" prefWidth="674.0" style="-fx-background-color: #62ee83;">

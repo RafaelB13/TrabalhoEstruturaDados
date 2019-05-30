@@ -17,6 +17,9 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 import java.util.ResourceBundle;
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -40,6 +43,9 @@ public class FXMLSpotifyController implements Initializable {
             musica1, musica2, musica3, musica4, musica5, musica6, musica7, musica8, musica9, musica10,
             //Musicas Linkin Park Hybrid Theory
             musicaH1, musicaH2, musicaH3, musicaH4, musicaH5, musicasAlbum;
+    @FXML
+    private ListView listViewMusicas;
+    ObservableList<String> list = FXCollections.observableArrayList();
 
     @FXML
     private ImageView btnPause, btnStop, btnPlay, btnProximaMusica, btnMusicaAnterior;
@@ -47,23 +53,24 @@ public class FXMLSpotifyController implements Initializable {
     private TextField txtPesquisar;
     @FXML
     private Button btnPesquisar, btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ,
-            btnK, btnL, btnM, btnN, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ;
+            btnK, btnL, btnM, btnN, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ,
+            btnObterProximoALbum;
 
     //Pilha<Musica> songs1, songs2, songs3, songs4, songs5, songs6, songs7, songs8, songs9, songs10;
     //Album a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13;
     //ListaDuplamente<Album> lAlbum1, lAlbum2, lAlbum3, lAlbum4, lAlbum5, lAlbum6, lAlbum7, lAlbum8, lAlbum9, lAlbum10;
-
     Arvore<Artista> arvore = Arvore.getInstancia();
 
     //Linkin Park Meteora
     //Musica linkin1, linkin2, linkin3, linkin4, linkin5, linkin6, linkin7, linkin8, linkin9, linkin10;
     //Musica hybrid1, hybrid2, hybrid3, hybrid4, hybrid5;
     //Red Hot Chili Peppers
-
     MP3Player player;
     String diretorio;
     String path;
     String path1;
+
+   
 
     private void reproducao(String local) {
 
@@ -77,44 +84,79 @@ public class FXMLSpotifyController implements Initializable {
     @FXML
     private void buscaDeArtista(MouseEvent event) {
         //listaDeArtistas();
-        
-         Arvore arvore = Arvore.getInstancia();
-         No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText());
-         Artista a = n.obterValor();
-         System.out.println( a.getCantor() );
-         ListaDuplamente<Album> ab = a.getAlbuns();
-         
-         NoL no = ab.getNoAtual();
-         nomeArtista.setText(a.getCantor());
-         while(no!=null){
-             System.out.println(no);
-             
-              Album m = (Album) no.obterValor();
-              
-              
-              while( !m.songs.estaVazia()){
-                 Musica mu = m.songs.remover();                  
-                    
-                    musicasAlbum.setText(mu.nome);
-                    album1.setText(m.titulo);
-                    System.out.println( mu.nome );   
-                    player = mP3Player();
-                    File f = new File(mu.local);
-                 
-                 player.addToPlayList(f);
-                 
-                  
-              } 
-             ab.nextNoAtual();
-             no = ab.getNoAtual();
-    
-         }
-         
-         
-         
-         
-         
-        
+
+        Arvore arvore = Arvore.getInstancia();
+        No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText());
+        Artista a = n.obterValor();
+
+        System.out.println(a.getCantor());
+        ListaDuplamente<Album> ab = a.getAlbuns();
+
+        NoL no = ab.getNoAtual();
+        Album al = (Album) no.obterValor();
+        nomeArtista.setText(a.getCantor());
+        while (no != null) {
+            System.out.println(no);
+
+            Album m = (Album) no.obterValor();
+            
+            while (!m.songs.estaVazia()) {
+                
+                Musica mu = m.songs.remover();
+                album1.setText(m.titulo);
+                System.out.println(mu.nome);
+                player = mP3Player();
+                list.add(mu.local);
+                listViewMusicas.setItems(list);
+                String getItem = mu.local;
+                
+                
+
+                listViewMusicas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        stop(event);
+                        String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                        File a1 = new File(s);
+                        player = mP3Player();
+                        player.addToPlayList(a1);
+
+                        play(event);
+                        btnProximaMusica.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                stop(event);
+                                listViewMusicas.getSelectionModel().selectNext();
+                                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                                File a1 = new File(s);
+                                player = mP3Player();
+                                player.addToPlayList(a1);
+                                player.play();
+                            }
+                        });
+                        btnMusicaAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                stop(event);
+                                listViewMusicas.getSelectionModel().selectPrevious();
+                                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                                File a1 = new File(s);
+                                player = mP3Player();
+                                player.addToPlayList(a1);
+                                player.play();
+                            }
+                        });
+
+                    }
+
+                });
+
+            }
+            ab.nextNoAtual();
+            no = ab.getNoAtual();
+
+        }
+
         /*Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", lAlbum2);
         Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
         Artista demilovato = new Artista("Demi Lovato", "Pop", lAlbum3);
@@ -157,7 +199,6 @@ public class FXMLSpotifyController implements Initializable {
             musica9.setText("");
             musica10.setText("");
         }*/
-
     }
 
     @FXML
@@ -172,6 +213,7 @@ public class FXMLSpotifyController implements Initializable {
 
     @FXML
     public void pause(MouseEvent event) {
+
         status.setText("Pausado");
         player.pause();
     }
@@ -211,7 +253,6 @@ public class FXMLSpotifyController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
 
     }
 
@@ -278,7 +319,6 @@ public class FXMLSpotifyController implements Initializable {
         a3 = new Album(songs3, "Album Demi");
         lAlbum3 = new ListaDuplamente<>();
         lAlbum3.inserir(a3); */
-
     }
 
     public void reproducaoLinkinParkHT() {
@@ -290,11 +330,11 @@ public class FXMLSpotifyController implements Initializable {
             //File mush4 = new File(songs2.getReferencia(4).toString());
 
             player = mP3Player();
-           // player.addToPlayList(mush0);
-           // player.addToPlayList(mush1);
+            // player.addToPlayList(mush0);
+            // player.addToPlayList(mush1);
             //player.addToPlayList(mush2);
-           // player.addToPlayList(mush3);
-           // player.addToPlayList(mush4);
+            // player.addToPlayList(mush3);
+            // player.addToPlayList(mush4);
 
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
@@ -316,10 +356,9 @@ public class FXMLSpotifyController implements Initializable {
             File mus7 = new File(songs1.getReferencia(7).toString());
             File mus8 = new File(songs1.getReferencia(8).toString());
             File mus9 = new File(songs1.getReferencia(9).toString());*/
-
             player = mP3Player();
 
-           /* player.addToPlayList(mus0);
+            /* player.addToPlayList(mus0);
             player.addToPlayList(mus1);
             player.addToPlayList(mus2);
             player.addToPlayList(mus3);
@@ -330,7 +369,6 @@ public class FXMLSpotifyController implements Initializable {
             player.addToPlayList(mus8);
             player.addToPlayList(mus9);
             path = Paths.get(".").normalize().toString(); */
-
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         }

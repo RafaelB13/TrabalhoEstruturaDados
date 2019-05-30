@@ -2,8 +2,8 @@ package estruturas.listaduplamente;
 
 public class NoL<Album extends Comparable<Album>> {
 	
-	private Album valor;
-	private NoL proximo;
+	Album valor;
+	NoL proximo;
         private NoL anterior;
 	
 	public NoL(Album valor) {

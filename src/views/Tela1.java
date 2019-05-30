@@ -74,9 +74,10 @@ public class Tela1 extends Application{
         songs2.inserir(hybrid5);
 
         Album a1 = new Album(songs1, "Meteora");
-        //a2 = new Album(songs2, "Hybrid Theory");
+        Album a2 = new Album(songs2, "Hybrid Theory");
          ListaDuplamente lAlbum1 = new ListaDuplamente<>();
         lAlbum1.inserir(a1);
+        lAlbum1.inserir(a2);
 
         //reproducaoLinkinParkMeteora();
         //reproducaoLinkinParkHT();
@@ -89,18 +90,18 @@ public class Tela1 extends Application{
         songs2.inserir(r1);
         songs2.inserir(r2);
         songs2.inserir(r3);
-        Album a2 = new Album(songs2, "Californication");
+        Album a3 = new Album(songs2, "Californication");
         ListaDuplamente lAlbum2 = new ListaDuplamente<>();
-        lAlbum2.inserir(a2);
+        lAlbum2.inserir(a3);
 
         Musica d1 = new Musica("Musica Demi Lovato ", "C:/");
         Musica d2 = new Musica("Musica Demi Lovato ", "C:/");
         Pilha songs3 = new Pilha<>(3);
         songs3.inserir(d1);
         songs3.inserir(d2);
-        Album a3 = new Album(songs3, "Album Demi");
+        Album a4 = new Album(songs3, "Album Demi");
         ListaDuplamente lAlbum3 = new ListaDuplamente<>();
-        lAlbum3.inserir(a3);
+        lAlbum3.inserir(a4);
           
         Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", lAlbum2);
         Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
