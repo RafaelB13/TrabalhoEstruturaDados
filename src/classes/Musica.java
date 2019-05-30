@@ -3,17 +3,24 @@ package classes;
 
 
 public class Musica {
-    private String nome;
-    public static String local;
+    public String nome;
+    public  String local;
+    
+    
 
     public Musica(String nome, String local) {
+        
         this.nome = nome;
         this.local = local;
+        
 
     }
 
-
-
+    public Musica() {
+    }
+    
+    
+    
 
 
 
@@ -34,10 +41,12 @@ public class Musica {
     public void setLocal(String local) {
         this.local = local;
     }
+    
+    
 
     @Override
     public String toString() {
-        return "\n    " + nome ; //+ ", Local: " + local
+        return local; //+ ", Local: " + local
     }
     
     

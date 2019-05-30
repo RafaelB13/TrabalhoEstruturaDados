@@ -1,5 +1,6 @@
 package estruturas;
 
+import classes.Pilha;
 import classes.Arvore;
 
 /**
@@ -11,10 +12,10 @@ public class Testes {
     
     public static void main(String[] args) {
         
-        Pilha<Integer> p = new Pilha<>(10);
+        Pilha  p = new Pilha<>(10);
         
         for (int i = 0; i < 10; i++) {
-            p.inserir(i);
+             
         }
         
         

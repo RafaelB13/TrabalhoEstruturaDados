@@ -3,14 +3,14 @@ package classes;
 import classes.Artista;
 
 
-public class Arvore<Artista extends Comparable<Artista>> {
+public class Arvore<T extends Comparable<T>> {
     No raiz;
 
     private static Arvore arvore;
 
     public static Arvore getInstancia() {
         if (arvore == null)
-            arvore = new Arvore();
+            arvore = new Arvore<Artista>();
 
         return arvore;
     }
@@ -146,12 +146,16 @@ public class Arvore<Artista extends Comparable<Artista>> {
     }
 
 
-    public No buscaNo(Artista valor) {
+    public No buscaNo(T valor) {
         //No no = new No((Comparable) raiz);
         return buscarNo(valor, this.raiz);
     }
-
-    public No buscarNo(Artista dado, No no) {
+    
+    public No buscarNoByNome(String dado) {
+        return buscarNoByNome(dado, this.raiz);
+    }
+    
+    public No buscarNo(T dado, No no) {
 
         if (no == null) {
             return null;
@@ -165,7 +169,19 @@ public class Arvore<Artista extends Comparable<Artista>> {
         }
     }
 
+    public No buscarNoByNome(String dado, No<Artista> no) {
 
+          if (no == null) {
+              return null;
+          } else if (no.obterValor().getCantor().compareTo(dado) == 0) {
+              return no;
+          } else if (no.obterValor().getCantor().compareTo(dado) == 1) {
+              return buscarNoByNome(dado, no.obterNoDireito());
+          } else {
+              // vai para a esquerda
+              return buscarNoByNome(dado, no.obterNoEsquerdo());
+          }
+      }
     public No getSucessor(No atual, Boolean primeiraVez) {
 
         No sucessor = null;

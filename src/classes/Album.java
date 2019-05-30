@@ -2,7 +2,6 @@
 package classes;
 
 import estruturas.Fila;
-import estruturas.Pilha;
 import java.util.ArrayList;
 
 
@@ -17,9 +16,6 @@ public class Album implements Comparable<Album>{
     public String titulo;
     
     
-    
-
-
     //Teste ####
     public Album(Pilha<Musica> songs, String titulo) {
         this.songs = songs;
@@ -41,13 +37,8 @@ public class Album implements Comparable<Album>{
 
     @Override
     public int compareTo(Album t) {
-
-        if(t.titulo.compareTo(this.titulo) != 0)
-            return -1;
-        else if(t.titulo.compareTo(this.titulo) == 0)
-            return 0;
-        else
-            return 1;
+        return 0;
+        
     }
     
     

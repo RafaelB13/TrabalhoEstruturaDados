@@ -3,28 +3,28 @@ package classes;
 
 
 
-public class No<Artista extends Comparable<Artista>> {
+public class No<T extends Comparable<T>> {
 	
 	No esquerdo;
 	No direito;
-	Artista valor;
+	T valor;
 	No pai;
 	
-	public No(Artista valor) {
+	public No(T valor) {
 		this.valor = valor;
 	}
 	
-	public No(Artista valor, No pai) {
+	public No(T valor, No pai) {
 		this.valor = valor;
 		this.pai = pai;
 	}
 	
 	
-	public void inserirValor(Artista valor) {
+	public void inserirValor(T valor) {
 		this.valor = valor;
 	}
 	
-	public Artista obterValor() {
+	public T obterValor() {
 		return this.valor;
 	}
 	

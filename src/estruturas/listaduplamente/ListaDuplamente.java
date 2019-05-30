@@ -12,6 +12,7 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
 
         if (this.primeiro == null) {
             this.primeiro = novo_no;
+            no_atual = primeiro;
 
         } else {
 
@@ -32,6 +33,7 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
                     novo_no.inserirProximo(this.primeiro);
                     this.primeiro.inserirAnterior(novo_no);
                     this.primeiro = novo_no;
+                    no_atual = primeiro;
                 }
 
             } else {
@@ -50,7 +52,16 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
         }
 
     }
-
+    
+    public NoL getNoAtual(){
+        return no_atual;
+    }
+    
+    public void nextNoAtual(){
+        if(no_atual!= null)
+            no_atual = no_atual.obterProximo();
+    }
+    
     public NoL remover(Album valor) {//arrumada 
 
         NoL auxiliar = primeiro;
