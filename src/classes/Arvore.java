@@ -198,20 +198,20 @@ public class Arvore<T extends Comparable<T>> {
         return sucessor;
     }
 
-    @Override
-    public String toString() {
-
-        return raiz +
-                "\n" + raiz.direito +
-                "\n" + raiz.direito.direito +
-                "\n" + raiz.direito.esquerdo +
-                "\n" + raiz.direito.direito.direito +
-                "\n" + raiz.esquerdo +
-                "\n" + raiz.esquerdo.direito +
-                "\n" + raiz.esquerdo.esquerdo +
-                "\n" + raiz.esquerdo.esquerdo.esquerdo;
-        //"\n" + raiz.esquerdo.esquerdo.esquerdo.direito;
-
-
-    }
+//    @Override
+//    public String toString() {
+//
+//        return raiz +
+//                "\n" + raiz.direito +
+//                "\n" + raiz.esquerdo +
+//                "\n" + raiz.direito.direito +
+//                "\n" + raiz.direito.esquerdo +
+//                "\n" + raiz.direito.direito.direito + 
+//                "\n" + raiz.esquerdo.direito +
+//                "\n" + raiz.esquerdo.esquerdo +
+//                "\n" + raiz.esquerdo.esquerdo.esquerdo;
+//        //"\n" + raiz.esquerdo.esquerdo.esquerdo.direito;
+//
+//
+//    }
 }

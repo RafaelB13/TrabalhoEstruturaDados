@@ -5,6 +5,7 @@
  */
 package classes;
 
+import estruturas.ListaCircular.ListaCircular;
 import estruturas.listaduplamente.ListaDuplamente;
 import java.util.ArrayList;
 
@@ -16,13 +17,13 @@ public class Artista implements Comparable<Artista>{
     
      public String cantor;
      String genero;
-     ListaDuplamente<Album> albuns;
+     ListaCircular<Album> albuns;
     //incluir lista de albuns
 
 
     
 
-    public Artista(String cantor, String genero, ListaDuplamente<Album> albuns) {
+    public Artista(String cantor, String genero, ListaCircular albuns) {
         this.cantor = cantor;
         this.genero = genero;
         this.albuns = albuns;
@@ -31,6 +32,8 @@ public class Artista implements Comparable<Artista>{
     public Artista(){
 
     }
+
+    
 
 
 
@@ -55,11 +58,11 @@ public class Artista implements Comparable<Artista>{
         return "Artista: " + cantor + ", Genero: " + genero;//+ "\n" + albuns
     }
 
-    public ListaDuplamente<Album> getAlbuns() {
+    public ListaCircular<Album> getAlbuns() {
         return albuns;
     }
 
-    public void setAlbuns(ListaDuplamente<Album> albuns) {
+    public void setAlbuns(ListaCircular<Album> albuns) {
         this.albuns = albuns;
     }
     

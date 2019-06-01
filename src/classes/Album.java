@@ -30,6 +30,24 @@ public class Album implements Comparable<Album>{
 
     }
 
+    public Pilha<Musica> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(Pilha<Musica> songs) {
+        this.songs = songs;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "\nÁlbum: "+titulo;//+"\nSongs: " + songs
@@ -37,7 +55,7 @@ public class Album implements Comparable<Album>{
 
     @Override
     public int compareTo(Album t) {
-        return 0;
+        return this.titulo.compareTo(t.titulo);
         
     }
     

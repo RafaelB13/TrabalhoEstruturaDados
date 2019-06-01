@@ -6,18 +6,14 @@
 package views;
 
 import classes.*;
-import classes.Pilha;
-import estruturas.listaduplamente.ListaDuplamente;
-import estruturas.listaduplamente.NoL;
+import estruturas.ListaCircular.ListaCircular;
+import estruturas.ListaCircular.NoC;
 import jaco.mp3.player.MP3Player;
 import java.io.File;
 
 import java.net.URL;
-import java.nio.file.Paths;
-import java.util.Arrays;
 
 import java.util.ResourceBundle;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -37,8 +33,8 @@ import javafx.scene.input.MouseEvent;
 public class FXMLSpotifyController implements Initializable {
 
     @FXML
-    private Label teste, status, nomeArtista, labelArtistas, album1, album2, album3, album4,
-            listaMusicas, listaMusicas2, listaMusicas3, listaMusicas4,
+    private Label teste, status, nomeArtista, labelArtistas, album1, album2, album3, album4, labelT,
+            listaMusicas, listaMusicas2, listaMusicas3, listaMusicas4, albumAnterior, proximoAlbum,
             //Musicas Linkin Park Meteora
             musica1, musica2, musica3, musica4, musica5, musica6, musica7, musica8, musica9, musica10,
             //Musicas Linkin Park Hybrid Theory
@@ -53,8 +49,7 @@ public class FXMLSpotifyController implements Initializable {
     private TextField txtPesquisar;
     @FXML
     private Button btnPesquisar, btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ,
-            btnK, btnL, btnM, btnN, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ,
-            btnObterProximoALbum;
+            btnK, btnL, btnM, btnN, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ;
 
     //Pilha<Musica> songs1, songs2, songs3, songs4, songs5, songs6, songs7, songs8, songs9, songs10;
     //Album a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13;
@@ -70,8 +65,6 @@ public class FXMLSpotifyController implements Initializable {
     String path;
     String path1;
 
-   
-
     private void reproducao(String local) {
 
     }
@@ -86,119 +79,138 @@ public class FXMLSpotifyController implements Initializable {
         //listaDeArtistas();
 
         Arvore arvore = Arvore.getInstancia();
-        No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText());
-        Artista a = n.obterValor();
-
+        System.out.println(arvore.toString());
+        No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText()); 
+         
+        Artista a = n.obterValor(); 
         System.out.println(a.getCantor());
-        ListaDuplamente<Album> ab = a.getAlbuns();
+        ListaCircular<Album> ab = a.getAlbuns();
 
-        NoL no = ab.getNoAtual();
-        Album al = (Album) no.obterValor();
         nomeArtista.setText(a.getCantor());
-        while (no != null) {
-            System.out.println(no);
 
-            Album m = (Album) no.obterValor();
+        NoC no = ab.primeiro;
+        Album m = no.obterValor();
+        System.out.println(no);
+        album1.setText(m.titulo); 
+         
+         
+        while (!m.songs.estaVazia()) {
             
-            while (!m.songs.estaVazia()) {
-                
-                Musica mu = m.songs.remover();
-                album1.setText(m.titulo);
-                System.out.println(mu.nome);
-                player = mP3Player();
-                list.add(mu.local);
-                listViewMusicas.setItems(list);
-                String getItem = mu.local;
-                
-                
+            Musica mu = m.songs.remover();
+            System.out.println(mu.local);
+            player = mP3Player();
 
-                listViewMusicas.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        stop(event);
-                        String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
-                        File a1 = new File(s);
-                        player = mP3Player();
-                        player.addToPlayList(a1);
+            list.add(mu.local);
+            listViewMusicas.setItems(list);
 
-                        play(event);
-                        btnProximaMusica.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                            @Override
-                            public void handle(MouseEvent event) {
-                                stop(event);
-                                listViewMusicas.getSelectionModel().selectNext();
-                                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
-                                File a1 = new File(s);
-                                player = mP3Player();
-                                player.addToPlayList(a1);
-                                player.play();
-                            }
-                        });
-                        btnMusicaAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                            @Override
-                            public void handle(MouseEvent event) {
-                                stop(event);
-                                listViewMusicas.getSelectionModel().selectPrevious();
-                                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
-                                File a1 = new File(s);
-                                player = mP3Player();
-                                player.addToPlayList(a1);
-                                player.play();
-                            }
-                        });
+            eventosListView();
+        }
+        labelT.setText(m.getSongs().toString());
+        
+        
+        proximoAlbum.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                NoC no = ab.obterNoProximo();
+                Album m = no.obterValor();
 
-                    }
+                System.out.println(no);
+                album1.setText(m.titulo); 
+                 
+                while (!m.songs.estaVazia()) {
 
-                });
+                    Musica mu = m.songs.remover();
+                    System.out.println(mu.nome);
+                    player = mP3Player();
+                    
+                    list.add(mu.local);
+                    listViewMusicas.setItems(list);
+                     
+                    eventosListView();
+                }
+                labelT.setText(m.songs.local);
 
             }
-            ab.nextNoAtual();
-            no = ab.getNoAtual();
 
         }
+        );
 
-        /*Artista redhot = new Artista("Red Hot Chilli Peppers", "Rock", lAlbum2);
-        Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
-        Artista demilovato = new Artista("Demi Lovato", "Pop", lAlbum3);
+        albumAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                NoC no = ab.obterNoAnterior();
+                Album m = no.obterValor();
 
-        arvore.inserirNo(linkinPark);
-        arvore.inserirNo(demilovato);
-        arvore.inserirNo(redhot);
+                System.out.println(no);
+                album1.setText(m.titulo); 
+                 
+                while (!m.songs.estaVazia() ) {
 
-        if (txtPesquisar.getText().equals(linkinPark.getCantor()) || txtPesquisar.getText().equals("l")) {
+                    Musica mu = m.songs.remover();
+                    System.out.println(mu.nome);
+                    player = mP3Player();
 
-            nomeArtista.setText(arvore.buscaNo(linkinPark).toString());
-            album1.setText(a1.titulo);
+                    list.add(mu.local);
+                    listViewMusicas.setItems(list);
+                     
+                    String getItem = mu.local;
 
-            listadeMusicas(linkin1.getNome(), linkin2.getNome(), linkin3.getNome(),
-                    linkin4.getNome(), linkin5.getNome(), linkin6.getNome(), linkin7.getNome(),
-                    linkin8.getNome(), linkin9.getNome(), linkin10.getNome());
+                    eventosListView();
 
-            listaMusicas.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> play(event));
+                }
+                labelT.setText(m.songs.nome);
 
-//            album2.setText(a1.titulo);
-//            listadeMusicas2(hybrid1.getNome(), hybrid2.getNome(), hybrid3.nome, hybrid4.getNome(), hybrid5.getNome());
-//            listaMusicas2.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> play(event));
-        } else if (txtPesquisar.getText().equals(redhot.getCantor()) || txtPesquisar.getText().equals("r")) {
-            nomeArtista.setText(arvore.buscaNo(demilovato).toString());
-            album1.setText(a2.titulo);
-        } else if (txtPesquisar.getText().equals("")) {
-            nomeArtista.setText("Não Encontrado");
-            album1.setText("");
-            album2.setText("");
-            album3.setText("");
-            album4.setText("");
-            musica1.setText("");
-            musica2.setText("");
-            musica3.setText("");
-            musica4.setText("");
-            musica5.setText("");
-            musica6.setText("");
-            musica7.setText("");
-            musica8.setText("");
-            musica9.setText("");
-            musica10.setText("");
-        }*/
+            }
+
+        }
+        );
+
+        
+    }
+
+    public void eventosListView() {
+        listViewMusicas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stop(event);
+                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                File a1 = new File(s);
+                player = mP3Player();
+                player.addToPlayList(a1);
+                play(event);
+                reproduzir();
+
+            }
+
+        });
+    }
+
+    public void reproduzir() {
+        btnProximaMusica.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stop(event);
+                listViewMusicas.getSelectionModel().selectNext();
+                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                File a1 = new File(s);
+                player = mP3Player();
+                player.addToPlayList(a1);
+                player.play();
+            }
+        });
+        btnMusicaAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stop(event);
+                listViewMusicas.getSelectionModel().selectPrevious();
+                String s = listViewMusicas.getSelectionModel().getSelectedItem().toString();
+                File a1 = new File(s);
+                player = mP3Player();
+                player.addToPlayList(a1);
+                player.play();
+            }
+        });
+
     }
 
     @FXML

@@ -16,7 +16,7 @@ public class EstruturaDeAudio {
         // TODO code application logic here
 
         Arvore<Artista> arvore = Arvore.getInstancia();
-
+/*
         //Primeiro Artista ******************************
         Musica m1 = new Musica("Can't Stop", "C:/Users/Red Hot");
         Musica m2 = new Musica("By the Way", "C:/Users/Red Hot");
@@ -378,7 +378,7 @@ public class EstruturaDeAudio {
          * D   O     S   U
          *                 V
 
-        */
+        
 
 
         System.out.println("\n#################################\nraiz\n");
@@ -402,8 +402,8 @@ public class EstruturaDeAudio {
         System.out.println("\n#################################\nraiz.esquerdo.esquerdo.esquerdo.diretio\n");
         System.out.println(arvore.raiz.esquerdo.esquerdo.esquerdo.direito);
 
-
-
+*/
+        
     }
 
 }

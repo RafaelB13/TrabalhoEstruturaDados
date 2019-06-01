@@ -1,12 +1,12 @@
 package estruturas.listaduplamente;
 
 
-public class ListaDuplamente<Album extends Comparable<Album>> {
+public class ListaDuplamente<T extends Comparable<T>> {
 
     NoL primeiro;
     NoL no_atual = primeiro;
 
-    public void inserir(Album valor) {
+    public void inserir(T valor) {
         NoL novo_no = new NoL(valor);
         NoL auxiliar = primeiro;
 
@@ -62,7 +62,7 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
             no_atual = no_atual.obterProximo();
     }
     
-    public NoL remover(Album valor) {//arrumada 
+    public NoL remover(T valor) {//arrumada 
 
         NoL auxiliar = primeiro;
 
@@ -90,7 +90,7 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
 
     }
 
-    public NoL<Album> buscar(Album valor) {
+    public NoL<T> buscar(T valor) {
 
         if (no_atual == null) {
             no_atual = primeiro;
@@ -108,7 +108,7 @@ public class ListaDuplamente<Album extends Comparable<Album>> {
         return no_atual;
     }
 
-    public String buscarCount(Album valor) {
+    public String buscarCount(T valor) {
 
         int count = 0;
 
