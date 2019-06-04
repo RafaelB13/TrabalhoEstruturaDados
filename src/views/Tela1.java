@@ -30,6 +30,8 @@ public class Tela1 extends Application {
     }
 
     public static void main(String[] args) {
+        
+        System.out.println("Teste");
 
         Musica linkin1 = new Musica("Don't Stay", "src\\musicas\\LinkinParkMeteora\\1Dontstay.mp3");
         Musica linkin2 = new Musica("Breaking the Habit", "src\\musicas\\LinkinParkMeteora\\2Breakingthehabit.mp3");
