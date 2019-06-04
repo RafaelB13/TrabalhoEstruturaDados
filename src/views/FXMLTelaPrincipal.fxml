@@ -80,37 +80,36 @@
                   <Font name="Berlin Sans FB" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnA" layoutX="22.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="A" />
-            <Button fx:id="btnB" layoutX="63.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="B" />
-            <Button fx:id="btnC" layoutX="104.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="C" />
-            <Button fx:id="btnD" layoutX="145.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="D" />
-            <Button fx:id="btnE" layoutX="187.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="E" />
-            <Button fx:id="btnF" layoutX="228.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="F" />
-            <Button fx:id="btnG" layoutX="269.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="G" />
-            <Button fx:id="btnH" layoutX="310.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="H" />
-            <Button fx:id="btnI" layoutX="351.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="I" />
-            <Button fx:id="btnJ" layoutX="392.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="J" />
-            <Button fx:id="btnK" layoutX="433.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="K" />
-            <Button fx:id="btnL" layoutX="474.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="L" />
-            <Button fx:id="btnM" layoutX="515.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="M" />
-            <Button fx:id="btnN" layoutX="23.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="N" />
-            <Button fx:id="btnO" layoutX="64.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="O" />
-            <Button fx:id="btnP" layoutX="105.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="P" />
-            <Button fx:id="btnQ" layoutX="147.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Q" />
-            <Button fx:id="btnR" layoutX="188.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="R" />
-            <Button fx:id="btnS" layoutX="229.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="S" />
-            <Button fx:id="btnT" layoutX="270.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="T" />
-            <Button fx:id="btnU" layoutX="311.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="U" />
-            <Button fx:id="btnV" layoutX="352.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="V" />
-            <Button fx:id="btnW" layoutX="393.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="W" />
-            <Button fx:id="btnX" layoutX="434.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="X" />
-            <Button fx:id="btnY" layoutX="475.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Y" />
-            <Button fx:id="btnZ" layoutX="515.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Z" />
+            <Button fx:id="btnA" layoutX="22.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="A" visible="false" />
+            <Button fx:id="btnB" layoutX="63.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="B" visible="false" />
+            <Button fx:id="btnC" layoutX="104.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="C" visible="false" />
+            <Button fx:id="btnD" layoutX="145.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="D" visible="false" />
+            <Button fx:id="btnE" layoutX="187.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="E" visible="false" />
+            <Button fx:id="btnF" layoutX="228.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="F" visible="false" />
+            <Button fx:id="btnG" layoutX="269.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="G" visible="false" />
+            <Button fx:id="btnH" layoutX="310.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="H" visible="false" />
+            <Button fx:id="btnI" layoutX="351.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="I" visible="false" />
+            <Button fx:id="btnJ" layoutX="392.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="J" visible="false" />
+            <Button fx:id="btnK" layoutX="433.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="K" visible="false" />
+            <Button fx:id="btnL" layoutX="474.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="L" visible="false" />
+            <Button fx:id="btnM" layoutX="515.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="M" visible="false" />
+            <Button fx:id="btnN" layoutX="23.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="N" visible="false" />
+            <Button fx:id="btnO" layoutX="64.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="O" visible="false" />
+            <Button fx:id="btnP" layoutX="105.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="P" visible="false" />
+            <Button fx:id="btnQ" layoutX="147.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Q" visible="false" />
+            <Button fx:id="btnR" layoutX="188.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="R" visible="false" />
+            <Button fx:id="btnS" layoutX="229.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="S" visible="false" />
+            <Button fx:id="btnT" layoutX="270.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="T" visible="false" />
+            <Button fx:id="btnU" layoutX="311.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="U" visible="false" />
+            <Button fx:id="btnV" layoutX="352.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="V" visible="false" />
+            <Button fx:id="btnW" layoutX="393.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="W" visible="false" />
+            <Button fx:id="btnX" layoutX="434.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="X" visible="false" />
+            <Button fx:id="btnY" layoutX="475.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Y" visible="false" />
+            <Button fx:id="btnZ" layoutX="515.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Z" visible="false" />
             <Separator layoutX="21.0" layoutY="155.0" prefHeight="3.0" prefWidth="545.0" />
-            <ListView fx:id="listViewMusicas" layoutX="23.0" layoutY="198.0" prefHeight="124.0" prefWidth="493.0" style="fx-font-family: Arial;" />
+            <ListView fx:id="listViewMusicas" layoutX="41.0" layoutY="205.0" prefHeight="301.0" prefWidth="493.0" style="fx-font-family: Arial;" />
             <Label fx:id="proximoAlbum" layoutX="379.0" layoutY="169.0" text="Proximo album" />
             <Label fx:id="albumAnterior" layoutX="87.0" layoutY="169.0" text="Album Anterior" />
-            <Label fx:id="labelT" alignment="TOP_LEFT" layoutX="25.0" layoutY="332.0" prefHeight="153.0" prefWidth="493.0" text="Label" wrapText="true" />
          </children>
       </Pane>
       <Pane layoutX="-1.0" layoutY="617.0" prefHeight="100.0" prefWidth="674.0" style="-fx-background-color: #62ee83;">

@@ -74,60 +74,44 @@ public class Tela1 extends Application {
         lAlbum1.inserir(a2);
 
     
-        Musica r1 = new Musica("Can't Stop", "C:/Users/Red Hot");
-        Musica r2 = new Musica("By the Way", "C:/Users/Red Hot");
-        Musica r3 = new Musica("Universally Speaking", "C:/Users/Red Hot");
-        Pilha songsr = new Pilha<>(4);
-        songsr.inserir(r1);
-        songsr.inserir(r2);
-        songsr.inserir(r3);
-        Album alC = new Album(songs2, "Californication");
-        Album alC2 = new Album(songs1, "Greatest Hits");
+         
+         
+        Album alC = new Album(songs1, "Californication");
+        Album alC2 = new Album(songs2, "Greatest Hits");
         ListaCircular<Album> lAlbum2 = new ListaCircular<>();
         lAlbum2.inserir(alC);
         lAlbum2.inserir(alC2);
 
-        Musica d1 = new Musica("Musica Demi Lovato ", "C:/");
-        Musica d2 = new Musica("Musica Demi Lovato ", "C:/");
-        Pilha songs3 = new Pilha<>(3);
-        songs3.inserir(d1);
-        songs3.inserir(d2);
-        Album a4 = new Album(songs3, "Album Demi");
+           
+        Album a4 = new Album(songs1, "Album Demi 1");
+        Album a5 = new Album(songs1, "Album Demi 2");
+        Album a6 = new Album(songs2, "Album Demi 3");
         ListaCircular<Album> lAlbum3 = new ListaCircular<>();
         lAlbum3.inserir(a4);
+        lAlbum3.inserir(a2); 
 
-        Musica c1 = new Musica("Teste1", "C/Users/Teste");
-        Musica c2 = new Musica("Teste2", "C/Users/Teste");
-        Pilha<Musica> songs5 = new Pilha<>(11);
-        songs5.inserir(c1);
-        songs5.inserir(c2);
-        Album ts = new Album(songs5, "Teste Album");
+         
+        Album ts = new Album(songs1, "Teste Album");
         ListaCircular<Album> tst = new ListaCircular<>();
-        tst.inserir(ts);
+        tst.inserir(a1);
         
  
-        Musica s1 = new Musica("Musica1", "C/Users/Musica");
-        Musica s2 = new Musica("Musica2", "C/Users/Musica");
-        Pilha<Musica> songs6 = new Pilha<>(11);
-        songs6.inserir(d1);
-        songs6.inserir(d2);
-        Album m = new Album(songs6, "Musicas Album");
+        
+        Album m = new Album(songs1, "Musicas Album");
         ListaCircular<Album> mm = new ListaCircular<>();
-        mm.inserir(m);
+        mm.inserir(a1);
 
-        Artista redhot = new Artista("G", "Rock", lAlbum2);
+        Artista redhot = new Artista("Red Hot", "Rock", lAlbum2);
         Artista linkinPark = new Artista("Linkin Park", "Rock", lAlbum1);
         Artista demilovato = new Artista("D", "Pop", lAlbum3);
         Artista spicegirls = new Artista("S", "Pop", lAlbum1);
         Artista cisney = new Artista("C", "Pop", tst);
 
         Arvore arvore = Arvore.getInstancia();
-
-        arvore.inserirNo(linkinPark);
+ 
         arvore.inserirNo(redhot);
-        arvore.inserirNo(demilovato);
+        arvore.inserirNo(linkinPark);
         arvore.inserirNo(spicegirls);
-        arvore.inserirNo(cisney);
         
         
 

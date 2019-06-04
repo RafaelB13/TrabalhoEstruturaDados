@@ -2,15 +2,16 @@ package classes;
 
 import classes.Artista;
 
-
 public class Arvore<T extends Comparable<T>> {
+
     No raiz;
 
     private static Arvore arvore;
 
     public static Arvore getInstancia() {
-        if (arvore == null)
+        if (arvore == null) {
             arvore = new Arvore<Artista>();
+        }
 
         return arvore;
     }
@@ -27,8 +28,9 @@ public class Arvore<T extends Comparable<T>> {
 
     public No inserirNo(No novo, No pai) {
 
-        if (pai == null)
+        if (pai == null) {
             pai = raiz;
+        }
 
         if (raiz == null) {
             raiz = novo;
@@ -36,24 +38,25 @@ public class Arvore<T extends Comparable<T>> {
             //menor
             if (novo.obterValor().compareTo(pai.obterValor()) == -1) {
 
-                if (pai.obterNoEsquerdo() == null)
+                if (pai.obterNoEsquerdo() == null) {
                     pai.inserirEsquerdo(novo);
-                else
+                } else {
                     inserirNo(novo, pai.obterNoEsquerdo());
+                }
 
             } else {
 
-                if (pai.obterNoDireito() == null)
+                if (pai.obterNoDireito() == null) {
                     pai.inserirDireito(novo);
-                else
+                } else {
                     inserirNo(novo, pai.obterNoDireito());
+                }
             }
         }
 
         return novo;
 
     }
-
 
     public No removerNo(Artista valor) {
         return removerNo(valor, null);
@@ -63,8 +66,9 @@ public class Arvore<T extends Comparable<T>> {
 
         No noret = null;
 
-        if (currentno == null)
+        if (currentno == null) {
             currentno = raiz;
+        }
 
         //igual
         if (currentno.obterValor().compareTo(valor) == 0) {
@@ -72,37 +76,35 @@ public class Arvore<T extends Comparable<T>> {
             //� um n� folha?
             if ((currentno.obterNoDireito() == null) && (currentno.obterNoEsquerdo() == null)) {
 
-                if (currentno == this.raiz)
+                if (currentno == this.raiz) {
                     this.raiz = null;
-
-                else if (currentno == currentno.pai.obterNoDireito())
+                } else if (currentno == currentno.pai.obterNoDireito()) {
                     currentno.pai.inserirDireito(null);
-                else
+                } else {
                     currentno.pai.inserirEsquerdo(null);
+                }
 
                 //tem apena sum filho � direita?
             } else if (currentno.obterNoDireito() == null) {
 
-                if (currentno == this.raiz)
+                if (currentno == this.raiz) {
                     this.raiz = this.raiz.obterNoEsquerdo();
-
-                else if (currentno == currentno.pai.obterNoDireito())
+                } else if (currentno == currentno.pai.obterNoDireito()) {
                     currentno.pai.inserirDireito(currentno.obterNoEsquerdo());
-
-                else
+                } else {
                     currentno.pai.inserirEsquerdo(currentno.obterNoEsquerdo());
+                }
 
                 //tem apena sum filho � esquerda?
             } else if (currentno.obterNoEsquerdo() == null) {
 
-                if (currentno == this.raiz)
+                if (currentno == this.raiz) {
                     this.raiz = this.raiz.obterNoDireito();
-
-                else if (currentno == currentno.pai.obterNoDireito())
+                } else if (currentno == currentno.pai.obterNoDireito()) {
                     currentno.pai.inserirDireito(currentno.obterNoDireito());
-
-                else
+                } else {
                     currentno.pai.inserirEsquerdo(currentno.obterNoDireito());
+                }
 
                 //tem dois filhos
             } else {
@@ -116,21 +118,19 @@ public class Arvore<T extends Comparable<T>> {
                     sucessor.inserirDireito(currentno.obterNoDireito());
                 }
 
-
                 //� a raiz
-                if (currentno == this.raiz)
+                if (currentno == this.raiz) {
                     raiz = sucessor;
-
-                    //� o filho a esquerda
-                else if (currentno == currentno.pai.obterNoDireito())
+                } //� o filho a esquerda
+                else if (currentno == currentno.pai.obterNoDireito()) {
                     currentno.pai.inserirDireito(sucessor);
-                else
+                } else {
                     currentno.pai.inserirEsquerdo(sucessor);
+                }
 
                 sucessor.inserirEsquerdo(currentno.obterNoEsquerdo());
 
             }
-
 
         } else if (currentno.obterValor().compareTo(valor) == -1) {
             //System.out.println(currentno.obterValor() + "� menor que "+valor);
@@ -141,20 +141,18 @@ public class Arvore<T extends Comparable<T>> {
 
         }
 
-
         return null;
     }
-
 
     public No buscaNo(T valor) {
         //No no = new No((Comparable) raiz);
         return buscarNo(valor, this.raiz);
     }
-    
+
     public No buscarNoByNome(String dado) {
         return buscarNoByNome(dado, this.raiz);
     }
-    
+
     public No buscarNo(T dado, No no) {
 
         if (no == null) {
@@ -171,25 +169,27 @@ public class Arvore<T extends Comparable<T>> {
 
     public No buscarNoByNome(String dado, No<Artista> no) {
 
-          if (no == null) {
-              return null;
-          } else if (no.obterValor().getCantor().compareTo(dado) == 0) {
-              return no;
-          } else if (no.obterValor().getCantor().compareTo(dado) == 1) {
-              return buscarNoByNome(dado, no.obterNoDireito());
-          } else {
-              // vai para a esquerda
-              return buscarNoByNome(dado, no.obterNoEsquerdo());
-          }
-      }
+        if (no == null) {
+            return null;
+        } else if (no.obterValor().getCantor().compareTo(dado) == 0) {
+            return no;
+        } else if (no.obterValor().getCantor().compareTo(dado) == 1) {
+            return buscarNoByNome(dado, no.obterNoDireito());
+        } else {
+            // vai para a esquerda
+            return buscarNoByNome(dado, no.obterNoEsquerdo());
+        }
+    }
+
     public No getSucessor(No atual, Boolean primeiraVez) {
 
         No sucessor = null;
 
-        if (primeiraVez)
+        if (primeiraVez) {
             sucessor = atual.obterNoDireito();
-        else
+        } else {
             sucessor = atual;
+        }
 
         if (sucessor.obterNoEsquerdo() != null) {
             return getSucessor(sucessor.obterNoEsquerdo(), false);
@@ -198,20 +198,5 @@ public class Arvore<T extends Comparable<T>> {
         return sucessor;
     }
 
-//    @Override
-//    public String toString() {
-//
-//        return raiz +
-//                "\n" + raiz.direito +
-//                "\n" + raiz.esquerdo +
-//                "\n" + raiz.direito.direito +
-//                "\n" + raiz.direito.esquerdo +
-//                "\n" + raiz.direito.direito.direito + 
-//                "\n" + raiz.esquerdo.direito +
-//                "\n" + raiz.esquerdo.esquerdo +
-//                "\n" + raiz.esquerdo.esquerdo.esquerdo;
-//        //"\n" + raiz.esquerdo.esquerdo.esquerdo.direito;
-//
-//
-//    }
+     
 }

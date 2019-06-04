@@ -10,6 +10,7 @@ import estruturas.ListaCircular.ListaCircular;
 import estruturas.ListaCircular.NoC;
 import jaco.mp3.player.MP3Player;
 import java.io.File;
+import java.io.IOException;
 
 import java.net.URL;
 
@@ -23,6 +24,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -77,95 +79,83 @@ public class FXMLSpotifyController implements Initializable {
     @FXML
     private void buscaDeArtista(MouseEvent event) {
         //listaDeArtistas();
+        try {
+            Arvore arvore = Arvore.getInstancia();
+            System.out.println(arvore.toString());
 
-        Arvore arvore = Arvore.getInstancia();
-        System.out.println(arvore.toString());
-        No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText()); 
-         
-        Artista a = n.obterValor(); 
-        System.out.println(a.getCantor());
-        ListaCircular<Album> ab = a.getAlbuns();
+            No<Artista> n = arvore.buscarNoByNome(txtPesquisar.getText());
+            Artista a = n.obterValor();
+            System.out.println(a.getCantor());
+            ListaCircular<Album> ab = a.getAlbuns();
 
-        nomeArtista.setText(a.getCantor());
+            nomeArtista.setText(a.getCantor());
 
-        NoC no = ab.primeiro;
-        Album m = no.obterValor();
-        System.out.println(no);
-        album1.setText(m.titulo); 
-         
-         
-        while (!m.songs.estaVazia()) {
-            
-            Musica mu = m.songs.remover();
-            System.out.println(mu.local);
-            player = mP3Player();
+            NoC no = ab.primeiro;
+            Album m = no.obterValor();
+            album1.setText(m.titulo);
+            while (!m.songs.estaVazia()) {
 
-            list.add(mu.local);
-            listViewMusicas.setItems(list);
+                Musica mu = m.songs.remover();
+                player = mP3Player();
 
-            eventosListView();
-        }
-        labelT.setText(m.getSongs().toString());
-        
-        
-        proximoAlbum.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                NoC no = ab.obterNoProximo();
-                Album m = no.obterValor();
+                list.add(mu.local);
+                listViewMusicas.setItems(list);
 
-                System.out.println(no);
-                album1.setText(m.titulo); 
-                 
-                while (!m.songs.estaVazia()) {
-
-                    Musica mu = m.songs.remover();
-                    System.out.println(mu.nome);
-                    player = mP3Player();
-                    
-                    list.add(mu.local);
-                    listViewMusicas.setItems(list);
-                     
-                    eventosListView();
-                }
-                labelT.setText(m.songs.local);
-
+                eventosListView();
             }
 
-        }
-        );
+            proximoAlbum.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    NoC no = ab.obterNoProximo();
+                    Album m = no.obterValor();
 
-        albumAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                NoC no = ab.obterNoAnterior();
-                Album m = no.obterValor();
+                    album1.setText(m.titulo);
+                    while (!m.songs.estaVazia()) {
 
-                System.out.println(no);
-                album1.setText(m.titulo); 
-                 
-                while (!m.songs.estaVazia() ) {
+                        Musica mu = m.songs.remover();
 
-                    Musica mu = m.songs.remover();
-                    System.out.println(mu.nome);
-                    player = mP3Player();
+                        player = mP3Player();
 
-                    list.add(mu.local);
-                    listViewMusicas.setItems(list);
-                     
-                    String getItem = mu.local;
+                        list.add(mu.local);
+                        listViewMusicas.setItems(list);
 
-                    eventosListView();
+                        eventosListView();
+                    }
 
                 }
-                labelT.setText(m.songs.nome);
 
             }
+            );
 
+            albumAnterior.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    NoC no = ab.obterNoAnterior();
+                    Album m = no.obterValor();
+
+                    System.out.println(no);
+                    album1.setText(m.titulo);
+                    list.clear();
+                    for (int i = 0; !m.songs.estaVazia(); i++) {
+
+                        Musica mu = m.songs.remover();
+                        player = mP3Player();
+
+                        list.add(mu.local);
+                        listViewMusicas.setItems(list);
+
+                        eventosListView();
+
+                    }
+
+                }
+
+            }
+            );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro: " + e.getLocalizedMessage());
         }
-        );
-
-        
     }
 
     public void eventosListView() {
